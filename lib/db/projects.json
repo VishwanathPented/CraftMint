@@ -1,0 +1,35 @@
+[
+  {
+    "id": "EVi962syy5OhJosCb0d55",
+    "slug": "good",
+    "title": "Good",
+    "location": "Bangalore",
+    "city": "SKSVMACET, Lakshmeshwar",
+    "state": "Karnataka",
+    "country": "India",
+    "projectType": [
+      "Residential"
+    ],
+    "year": 2023,
+    "architect": "Subhas",
+    "designer": "AI",
+    "client": "Google",
+    "description": "",
+    "challenge": "",
+    "approach": "",
+    "solution": "",
+    "finishSlugs": [],
+    "productsUsed": "Good",
+    "colour": "WHite",
+    "area": "2400",
+    "coverImage": "/uploads/projects/yOTf7lAtD3h68l9H1D1Hl.png",
+    "galleryImages": [],
+    "detailImages": [],
+    "beforeAfterImages": [],
+    "videoUrl": "",
+    "featured": false,
+    "published": true,
+    "createdAt": "2026-09-01T10:06:14.417Z",
+    "updatedAt": "2026-09-01T10:06:36.157Z"
+  }
+]

@@ -1,0 +1,330 @@
+[
+  {
+    "page": 5,
+    "heroImages": [
+      "/images/textures/p04_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p05_img02.webp",
+      "/images/texture_swatches/p05_img03.webp",
+      "/images/texture_swatches/p05_img04.webp",
+      "/images/texture_swatches/p05_img05.webp",
+      "/images/texture_swatches/p05_img06.webp",
+      "/images/texture_swatches/p05_img07.webp",
+      "/images/texture_swatches/p05_img08.webp",
+      "/images/unknown/p05_img01.webp"
+    ]
+  },
+  {
+    "page": 7,
+    "heroImages": [
+      "/images/textures/p06_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p07_img01.webp",
+      "/images/texture_swatches/p07_img02.webp",
+      "/images/texture_swatches/p07_img03.webp",
+      "/images/texture_swatches/p07_img04.webp",
+      "/images/texture_swatches/p07_img05.webp",
+      "/images/texture_swatches/p07_img06.webp",
+      "/images/texture_swatches/p07_img07.webp",
+      "/images/texture_swatches/p07_img08.webp"
+    ]
+  },
+  {
+    "page": 9,
+    "heroImages": [
+      "/images/textures/p08_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p09_img01.webp",
+      "/images/texture_swatches/p09_img02.webp",
+      "/images/texture_swatches/p09_img03.webp",
+      "/images/texture_swatches/p09_img04.webp",
+      "/images/texture_swatches/p09_img05.webp",
+      "/images/texture_swatches/p09_img06.webp",
+      "/images/texture_swatches/p09_img07.webp",
+      "/images/texture_swatches/p09_img08.webp"
+    ]
+  },
+  {
+    "page": 11,
+    "heroImages": [
+      "/images/textures/p10_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p11_img01.webp",
+      "/images/texture_swatches/p11_img02.webp",
+      "/images/texture_swatches/p11_img03.webp",
+      "/images/texture_swatches/p11_img04.webp",
+      "/images/texture_swatches/p11_img05.webp",
+      "/images/texture_swatches/p11_img06.webp",
+      "/images/texture_swatches/p11_img07.webp",
+      "/images/texture_swatches/p11_img08.webp",
+      "/images/texture_swatches/p11_img09.webp",
+      "/images/texture_swatches/p11_img10.webp",
+      "/images/texture_swatches/p11_img11.webp",
+      "/images/texture_swatches/p11_img12.webp",
+      "/images/texture_swatches/p11_img13.webp",
+      "/images/texture_swatches/p11_img14.webp",
+      "/images/texture_swatches/p11_img15.webp",
+      "/images/texture_swatches/p11_img16.webp"
+    ]
+  },
+  {
+    "page": 13,
+    "heroImages": [
+      "/images/textures/p12_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p13_img01.webp",
+      "/images/texture_swatches/p13_img02.webp",
+      "/images/texture_swatches/p13_img03.webp",
+      "/images/texture_swatches/p13_img04.webp",
+      "/images/texture_swatches/p13_img05.webp",
+      "/images/texture_swatches/p13_img06.webp",
+      "/images/texture_swatches/p13_img07.webp",
+      "/images/texture_swatches/p13_img08.webp",
+      "/images/texture_swatches/p13_img09.webp",
+      "/images/texture_swatches/p13_img10.webp",
+      "/images/texture_swatches/p13_img11.webp",
+      "/images/texture_swatches/p13_img12.webp",
+      "/images/texture_swatches/p13_img13.webp",
+      "/images/texture_swatches/p13_img14.webp",
+      "/images/texture_swatches/p13_img15.webp",
+      "/images/texture_swatches/p13_img16.webp"
+    ]
+  },
+  {
+    "page": 15,
+    "heroImages": [
+      "/images/textures/p14_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p15_img01.webp",
+      "/images/texture_swatches/p15_img02.webp",
+      "/images/texture_swatches/p15_img03.webp",
+      "/images/texture_swatches/p15_img04.webp",
+      "/images/texture_swatches/p15_img05.webp",
+      "/images/texture_swatches/p15_img06.webp",
+      "/images/texture_swatches/p15_img07.webp",
+      "/images/texture_swatches/p15_img08.webp"
+    ]
+  },
+  {
+    "page": 17,
+    "heroImages": [
+      "/images/textures/p16_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p17_img01.webp",
+      "/images/texture_swatches/p17_img02.webp",
+      "/images/texture_swatches/p17_img03.webp",
+      "/images/texture_swatches/p17_img04.webp",
+      "/images/texture_swatches/p17_img05.webp",
+      "/images/texture_swatches/p17_img06.webp",
+      "/images/texture_swatches/p17_img07.webp",
+      "/images/texture_swatches/p17_img08.webp",
+      "/images/texture_swatches/p17_img09.webp",
+      "/images/texture_swatches/p17_img10.webp",
+      "/images/texture_swatches/p17_img11.webp",
+      "/images/texture_swatches/p17_img12.webp",
+      "/images/texture_swatches/p17_img13.webp",
+      "/images/texture_swatches/p17_img14.webp",
+      "/images/texture_swatches/p17_img15.webp",
+      "/images/texture_swatches/p17_img16.webp"
+    ]
+  },
+  {
+    "page": 19,
+    "heroImages": [
+      "/images/textures/p18_img01.webp",
+      "/images/textures/p19_img04.webp"
+    ],
+    "swatchImages": [
+      "/images/material_samples/p19_img01.webp",
+      "/images/material_samples/p19_img02.webp",
+      "/images/unknown/p19_img03.webp"
+    ]
+  },
+  {
+    "page": 21,
+    "heroImages": [
+      "/images/textures/p20_img01.webp",
+      "/images/textures/p21_img04.webp"
+    ],
+    "swatchImages": [
+      "/images/material_samples/p21_img01.webp",
+      "/images/material_samples/p21_img02.webp",
+      "/images/material_samples/p21_img03.webp"
+    ]
+  },
+  {
+    "page": 23,
+    "heroImages": [
+      "/images/textures/p22_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p23_img01.webp",
+      "/images/texture_swatches/p23_img02.webp",
+      "/images/texture_swatches/p23_img03.webp",
+      "/images/texture_swatches/p23_img04.webp",
+      "/images/texture_swatches/p23_img05.webp",
+      "/images/texture_swatches/p23_img06.webp",
+      "/images/texture_swatches/p23_img07.webp",
+      "/images/texture_swatches/p23_img08.webp",
+      "/images/texture_swatches/p23_img09.webp",
+      "/images/texture_swatches/p23_img10.webp",
+      "/images/texture_swatches/p23_img11.webp",
+      "/images/texture_swatches/p23_img12.webp",
+      "/images/texture_swatches/p23_img13.webp",
+      "/images/texture_swatches/p23_img14.webp",
+      "/images/texture_swatches/p23_img15.webp",
+      "/images/texture_swatches/p23_img16.webp"
+    ]
+  },
+  {
+    "page": 25,
+    "heroImages": [
+      "/images/textures/p24_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p25_img01.webp",
+      "/images/texture_swatches/p25_img02.webp",
+      "/images/texture_swatches/p25_img03.webp",
+      "/images/texture_swatches/p25_img04.webp",
+      "/images/texture_swatches/p25_img05.webp",
+      "/images/texture_swatches/p25_img06.webp",
+      "/images/texture_swatches/p25_img07.webp",
+      "/images/texture_swatches/p25_img08.webp",
+      "/images/texture_swatches/p25_img09.webp",
+      "/images/texture_swatches/p25_img10.webp",
+      "/images/texture_swatches/p25_img11.webp",
+      "/images/texture_swatches/p25_img12.webp",
+      "/images/texture_swatches/p25_img13.webp",
+      "/images/texture_swatches/p25_img14.webp",
+      "/images/texture_swatches/p25_img15.webp",
+      "/images/texture_swatches/p25_img16.webp"
+    ]
+  },
+  {
+    "page": 27,
+    "heroImages": [
+      "/images/textures/p26_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p27_img01.webp",
+      "/images/texture_swatches/p27_img02.webp",
+      "/images/texture_swatches/p27_img03.webp",
+      "/images/texture_swatches/p27_img04.webp",
+      "/images/texture_swatches/p27_img05.webp",
+      "/images/texture_swatches/p27_img06.webp",
+      "/images/texture_swatches/p27_img07.webp",
+      "/images/texture_swatches/p27_img08.webp",
+      "/images/texture_swatches/p27_img09.webp",
+      "/images/texture_swatches/p27_img10.webp",
+      "/images/texture_swatches/p27_img11.webp",
+      "/images/texture_swatches/p27_img12.webp",
+      "/images/texture_swatches/p27_img13.webp",
+      "/images/texture_swatches/p27_img14.webp",
+      "/images/texture_swatches/p27_img15.webp",
+      "/images/texture_swatches/p27_img16.webp"
+    ]
+  },
+  {
+    "page": 29,
+    "heroImages": [
+      "/images/textures/p28_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p29_img01.webp",
+      "/images/texture_swatches/p29_img03.webp",
+      "/images/texture_swatches/p29_img04.webp",
+      "/images/texture_swatches/p29_img05.webp",
+      "/images/texture_swatches/p29_img06.webp",
+      "/images/texture_swatches/p29_img07.webp",
+      "/images/texture_swatches/p29_img08.webp",
+      "/images/unknown/p29_img02.webp"
+    ]
+  },
+  {
+    "page": 31,
+    "heroImages": [
+      "/images/textures/p30_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p31_img01.webp",
+      "/images/texture_swatches/p31_img02.webp",
+      "/images/texture_swatches/p31_img03.webp",
+      "/images/texture_swatches/p31_img04.webp",
+      "/images/texture_swatches/p31_img05.webp",
+      "/images/texture_swatches/p31_img06.webp",
+      "/images/texture_swatches/p31_img07.webp",
+      "/images/texture_swatches/p31_img08.webp",
+      "/images/texture_swatches/p31_img09.webp",
+      "/images/texture_swatches/p31_img10.webp",
+      "/images/texture_swatches/p31_img11.webp",
+      "/images/texture_swatches/p31_img12.webp",
+      "/images/texture_swatches/p31_img13.webp",
+      "/images/texture_swatches/p31_img14.webp",
+      "/images/texture_swatches/p31_img16.webp",
+      "/images/unknown/p31_img15.webp"
+    ]
+  },
+  {
+    "page": 33,
+    "heroImages": [
+      "/images/textures/p32_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/unknown/p33_img01.webp",
+      "/images/unknown/p33_img02.webp",
+      "/images/unknown/p33_img03.webp",
+      "/images/unknown/p33_img04.webp",
+      "/images/unknown/p33_img05.webp",
+      "/images/unknown/p33_img07.webp",
+      "/images/unknown/p33_img08.webp",
+      "/images/wall_finishes/p33_img06.webp"
+    ]
+  },
+  {
+    "page": 35,
+    "heroImages": [
+      "/images/textures/p34_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p35_img01.webp",
+      "/images/texture_swatches/p35_img02.webp",
+      "/images/texture_swatches/p35_img03.webp",
+      "/images/texture_swatches/p35_img04.webp",
+      "/images/texture_swatches/p35_img05.webp",
+      "/images/texture_swatches/p35_img06.webp",
+      "/images/texture_swatches/p35_img07.webp",
+      "/images/texture_swatches/p35_img08.webp"
+    ]
+  },
+  {
+    "page": 37,
+    "heroImages": [
+      "/images/textures/p36_img01.webp"
+    ],
+    "swatchImages": [
+      "/images/texture_swatches/p37_img01.webp",
+      "/images/texture_swatches/p37_img02.webp",
+      "/images/texture_swatches/p37_img03.webp",
+      "/images/texture_swatches/p37_img04.webp",
+      "/images/texture_swatches/p37_img05.webp",
+      "/images/texture_swatches/p37_img06.webp",
+      "/images/texture_swatches/p37_img07.webp",
+      "/images/texture_swatches/p37_img08.webp",
+      "/images/texture_swatches/p37_img09.webp",
+      "/images/texture_swatches/p37_img10.webp",
+      "/images/texture_swatches/p37_img11.webp",
+      "/images/texture_swatches/p37_img12.webp",
+      "/images/texture_swatches/p37_img13.webp",
+      "/images/texture_swatches/p37_img14.webp",
+      "/images/texture_swatches/p37_img15.webp",
+      "/images/texture_swatches/p37_img16.webp"
+    ]
+  }
+]
