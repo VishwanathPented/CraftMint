@@ -4,12 +4,14 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { LeadStatus, SampleRequest } from "@/types";
 import { finishes } from "@/data/finishes";
+import { ReplyEmailModal } from "@/components/admin/ReplyEmailModal";
 
 const STATUSES: LeadStatus[] = ["New", "Contacted", "Qualified", "Converted", "Closed"];
 
 export function SampleRequestsTable({ requests }: { requests: SampleRequest[] }) {
   const router = useRouter();
   const [pending, setPending] = useState<string | null>(null);
+  const [emailTarget, setEmailTarget] = useState<SampleRequest | null>(null);
 
   async function updateStatus(id: string, status: LeadStatus) {
     setPending(id);
@@ -36,18 +38,27 @@ export function SampleRequestsTable({ requests }: { requests: SampleRequest[] })
                 </p>
                 {req.company && <p className="font-sans text-xs text-warm-grey">{req.company}</p>}
               </div>
-              <select
-                value={req.status}
-                disabled={pending === req.id}
-                onChange={(e) => updateStatus(req.id, e.target.value as LeadStatus)}
-                className="focus-ring hairline bg-transparent px-3 py-1.5 font-sans text-xs uppercase tracking-[0.06em]"
-              >
-                {STATUSES.map((s) => (
-                  <option key={s} value={s}>
-                    {s}
-                  </option>
-                ))}
-              </select>
+              <div className="flex items-center gap-2">
+                <select
+                  value={req.status}
+                  disabled={pending === req.id}
+                  onChange={(e) => updateStatus(req.id, e.target.value as LeadStatus)}
+                  className="focus-ring hairline bg-transparent px-3 py-1.5 font-sans text-xs uppercase tracking-[0.06em]"
+                >
+                  {STATUSES.map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  type="button"
+                  onClick={() => setEmailTarget(req)}
+                  className="hairline px-3 py-1.5 font-sans text-xs uppercase tracking-[0.06em] text-charcoal-soft hover:text-charcoal"
+                >
+                  Reply
+                </button>
+              </div>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-4 font-sans text-xs text-charcoal-soft sm:grid-cols-4">
               <p>
@@ -73,6 +84,16 @@ export function SampleRequestsTable({ requests }: { requests: SampleRequest[] })
         );
       })}
       {requests.length === 0 && <p className="py-8 text-center font-sans text-sm text-warm-grey">No sample requests yet.</p>}
+
+      {emailTarget && (
+        <ReplyEmailModal
+          open={!!emailTarget}
+          onClose={() => setEmailTarget(null)}
+          endpoint={`/api/admin/sample-requests/${emailTarget.id}/email`}
+          recipientName={emailTarget.name}
+          recipientEmail={emailTarget.email}
+        />
+      )}
     </div>
   );
 }

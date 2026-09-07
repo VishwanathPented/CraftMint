@@ -128,6 +128,27 @@ export async function sendSampleRequestEmails(req: {
   ]);
 }
 
+export async function sendAdminReplyEmail(reply: { to: string; subject: string; message: string }): Promise<{ ok: boolean; error?: string }> {
+  const resend = getResend();
+  if (!resend) {
+    return { ok: false, error: "RESEND_API_KEY not set" };
+  }
+  const html = `<p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #4a463f; white-space: pre-wrap;">${escapeHtml(reply.message)}</p>`;
+  try {
+    const { error } = await resend.emails.send({
+      from: FROM,
+      to: reply.to,
+      subject: reply.subject,
+      replyTo: NOTIFY_TO,
+      html: wrapper(html),
+    });
+    if (error) return { ok: false, error: error.message };
+    return { ok: true };
+  } catch (err) {
+    return { ok: false, error: err instanceof Error ? err.message : "Failed to send" };
+  }
+}
+
 function escapeHtml(value: string): string {
   return value
     .replace(/&/g, "&amp;")

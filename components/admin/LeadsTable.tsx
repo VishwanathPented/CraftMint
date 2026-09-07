@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ReplyEmailModal } from "@/components/admin/ReplyEmailModal";
 import type { Lead, LeadStatus } from "@/types";
 
 const STATUSES: LeadStatus[] = ["New", "Contacted", "Qualified", "Converted", "Closed"];
@@ -13,6 +14,7 @@ export function LeadsTable({ leads }: { leads: Lead[] }) {
   const [statusFilter, setStatusFilter] = useState<LeadStatus | "All">("All");
   const [sortDesc, setSortDesc] = useState(true);
   const [pending, setPending] = useState<string | null>(null);
+  const [emailTarget, setEmailTarget] = useState<Lead | null>(null);
 
   const rows = useMemo(() => {
     let result = [...leads];
@@ -77,6 +79,7 @@ export function LeadsTable({ leads }: { leads: Lead[] }) {
               <th className="py-3 pr-4">Source</th>
               <th className="py-3 pr-4">Date</th>
               <th className="py-3 pr-4">Status</th>
+              <th className="py-3 pr-4"></th>
             </tr>
           </thead>
           <tbody>
@@ -104,11 +107,20 @@ export function LeadsTable({ leads }: { leads: Lead[] }) {
                     ))}
                   </select>
                 </td>
+                <td className="py-3 pr-4">
+                  <button
+                    type="button"
+                    onClick={() => setEmailTarget(lead)}
+                    className="hairline px-3 py-1.5 font-sans text-xs uppercase tracking-[0.06em] text-charcoal-soft hover:text-charcoal"
+                  >
+                    Reply
+                  </button>
+                </td>
               </tr>
             ))}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={6} className="py-8 text-center text-warm-grey">
+                <td colSpan={7} className="py-8 text-center text-warm-grey">
                   No leads match.
                 </td>
               </tr>
@@ -116,6 +128,16 @@ export function LeadsTable({ leads }: { leads: Lead[] }) {
           </tbody>
         </table>
       </div>
+
+      {emailTarget && (
+        <ReplyEmailModal
+          open={!!emailTarget}
+          onClose={() => setEmailTarget(null)}
+          endpoint={`/api/admin/leads/${emailTarget.id}/email`}
+          recipientName={emailTarget.name}
+          recipientEmail={emailTarget.email}
+        />
+      )}
     </div>
   );
 }
