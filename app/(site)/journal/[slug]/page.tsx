@@ -5,6 +5,8 @@ import { Container } from "@/components/ui/Container";
 import { formatDate } from "@/lib/utils";
 import { articlesStore } from "@/lib/store";
 
+export const revalidate = 60;
+
 async function getArticle(slug: string) {
   const all = await articlesStore.all();
   return all.find((a) => a.slug === slug && a.published);

@@ -3,6 +3,8 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { leadsStore, sampleRequestsStore, projectsStore, resourcesStore, articlesStore } from "@/lib/store";
 import { finishes } from "@/data/finishes";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminDashboard() {
   const [leads, samples, projects, resources, articles] = await Promise.all([
     leadsStore.all(),

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { nanoid } from "nanoid";
 import { sampleRequestSchema } from "@/lib/validation";
 import { sampleRequestsStore } from "@/lib/store";
+import { sendSampleRequestEmails } from "@/lib/email";
 import type { SampleRequest } from "@/types";
 
 export async function POST(request: NextRequest) {
@@ -29,6 +30,7 @@ export async function POST(request: NextRequest) {
   };
 
   await sampleRequestsStore.create(record);
+  await sendSampleRequestEmails(record);
 
   return NextResponse.json({ ok: true });
 }

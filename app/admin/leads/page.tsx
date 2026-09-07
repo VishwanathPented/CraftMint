@@ -2,6 +2,8 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { LeadsTable } from "@/components/admin/LeadsTable";
 import { leadsStore } from "@/lib/store";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminLeadsPage() {
   const leads = await leadsStore.all();
 

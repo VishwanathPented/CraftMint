@@ -4,6 +4,8 @@ import { PageHero } from "@/components/layout/PageHero";
 import { resourcesStore } from "@/lib/store";
 import type { ResourceCategory } from "@/types";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Resources — Technical Data, Guides & Downloads",
   description: "Technical data, application guides, colour guides and specification documents for Craftmint finishes.",

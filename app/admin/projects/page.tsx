@@ -4,6 +4,8 @@ import { ProjectsTable } from "@/components/admin/ProjectsTable";
 import { Button } from "@/components/ui/Button";
 import { projectsStore } from "@/lib/store";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminProjectsPage() {
   const projects = await projectsStore.all();
 

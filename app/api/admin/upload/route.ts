@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { mkdir, writeFile } from "node:fs/promises";
-import path from "node:path";
 import { nanoid } from "nanoid";
+import { getSupabase, UPLOADS_BUCKET } from "@/lib/supabase";
 
 const ALLOWED_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/avif"]);
 const MAX_SIZE = 10 * 1024 * 1024; // 10MB
@@ -21,12 +20,17 @@ export async function POST(request: NextRequest) {
   }
 
   const ext = file.type.split("/")[1];
-  const filename = `${nanoid()}.${ext}`;
-  const uploadDir = path.join(process.cwd(), "public", "uploads", "projects");
-  await mkdir(uploadDir, { recursive: true });
+  const filename = `projects/${nanoid()}.${ext}`;
 
-  const buffer = Buffer.from(await file.arrayBuffer());
-  await writeFile(path.join(uploadDir, filename), buffer);
+  const supabase = getSupabase();
+  const { error } = await supabase.storage.from(UPLOADS_BUCKET).upload(filename, file, {
+    contentType: file.type,
+    cacheControl: "31536000",
+  });
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
 
-  return NextResponse.json({ url: `/uploads/projects/${filename}` });
+  const { data } = supabase.storage.from(UPLOADS_BUCKET).getPublicUrl(filename);
+  return NextResponse.json({ url: data.publicUrl });
 }

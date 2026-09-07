@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { nanoid } from "nanoid";
 import { leadSchema } from "@/lib/validation";
 import { leadsStore } from "@/lib/store";
+import { sendLeadEmails } from "@/lib/email";
 import type { Lead } from "@/types";
 
 export async function POST(request: NextRequest) {
@@ -24,6 +25,7 @@ export async function POST(request: NextRequest) {
   };
 
   await leadsStore.create(lead);
+  await sendLeadEmails(lead);
 
   return NextResponse.json({ ok: true });
 }

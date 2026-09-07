@@ -14,6 +14,8 @@ import { InspirationTeaser } from "@/components/home/InspirationTeaser";
 import { FinalCta } from "@/components/home/FinalCta";
 import { projectsStore } from "@/lib/store";
 
+export const revalidate = 60;
+
 export default async function HomePage() {
   const allProjects = await projectsStore.all();
   const featuredProjects = allProjects.filter((p) => p.published && p.featured);

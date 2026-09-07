@@ -6,6 +6,8 @@ import { PageHero } from "@/components/layout/PageHero";
 import { articlesStore } from "@/lib/store";
 import { formatDate } from "@/lib/utils";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Journal — Notes on Material, Colour & Craft",
   description: "Craftmint's journal — notes on decorative finishes, texture, colour, architecture and craftsmanship.",

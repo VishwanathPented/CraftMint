@@ -2,6 +2,8 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { ResourcesManager } from "@/components/admin/ResourcesManager";
 import { resourcesStore } from "@/lib/store";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminResourcesPage() {
   const resources = await resourcesStore.all();
 

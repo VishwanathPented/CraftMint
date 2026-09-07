@@ -3,6 +3,8 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { ProjectForm } from "@/components/admin/ProjectForm";
 import { projectsStore } from "@/lib/store";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const project = await projectsStore.find(id);

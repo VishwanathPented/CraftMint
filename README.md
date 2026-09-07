@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Backend setup
+
+Forms, the admin dashboard, and image uploads run on Supabase (database +
+storage) and Resend (email). See [SETUP.md](SETUP.md) for how to connect
+them — required before `ADMIN_PASSWORD`/`ADMIN_SESSION_SECRET` alone will
+get you a working site.
+
 ## Getting Started
 
 First, run the development server:

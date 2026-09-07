@@ -13,6 +13,15 @@ const nextConfig: NextConfig = {
     // down) — the opposite of what we want on a texture-detail site.
     // WebP (Next's own default) doesn't have this problem, so we stay there.
     formats: ["image/webp"],
+    // Project/finish images uploaded via the admin dashboard are served
+    // from Supabase Storage's public bucket.
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*.supabase.co",
+        pathname: "/storage/v1/object/public/**",
+      },
+    ],
   },
 };
 

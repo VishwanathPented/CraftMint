@@ -10,6 +10,8 @@ import { projectsStore } from "@/lib/store";
 import { finishes } from "@/data/finishes";
 import { extractYouTubeId } from "@/lib/youtube";
 
+export const revalidate = 60;
+
 async function getProject(slug: string) {
   const all = await projectsStore.all();
   return all.find((p) => p.slug === slug && p.published);

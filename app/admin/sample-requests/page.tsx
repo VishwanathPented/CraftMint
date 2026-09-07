@@ -2,6 +2,8 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { SampleRequestsTable } from "@/components/admin/SampleRequestsTable";
 import { sampleRequestsStore } from "@/lib/store";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminSampleRequestsPage() {
   const requests = await sampleRequestsStore.all();
 

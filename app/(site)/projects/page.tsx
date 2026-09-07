@@ -5,6 +5,8 @@ import { LinkButton } from "@/components/ui/Button";
 import { ProjectExplorer } from "@/components/projects/ProjectExplorer";
 import { projectsStore } from "@/lib/store";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Projects — Architectural Finishes in Real Spaces",
   description: "Craftmint's project portfolio — decorative finishes, textures and architectural surfaces executed end-to-end.",
