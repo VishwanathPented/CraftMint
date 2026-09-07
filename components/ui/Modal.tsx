@@ -18,6 +18,11 @@ export function Modal({
   className?: string;
 }) {
   const dialogRef = useRef<HTMLDivElement>(null);
+  const onCloseRef = useRef(onClose);
+
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
 
   useEffect(() => {
     if (!open) return;
@@ -26,7 +31,7 @@ export function Modal({
     document.body.style.overflow = "hidden";
 
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") onCloseRef.current();
       if (e.key === "Tab" && dialogRef.current) {
         const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
           'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])',
@@ -50,7 +55,7 @@ export function Modal({
       document.body.style.overflow = "";
       previouslyFocused?.focus();
     };
-  }, [open, onClose]);
+  }, [open]);
 
   if (!open) return null;
 
