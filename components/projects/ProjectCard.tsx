@@ -17,7 +17,7 @@ export function ProjectCard({ project, size = "md" }: { project: Project; size?:
             alt={project.title}
             fill
             sizes="(min-width: 1024px) 45vw, 100vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="object-scale-down transition-transform duration-700 ease-out group-hover:scale-105"
           />
         ) : (
           <div className="flex h-full items-center justify-center font-sans text-xs uppercase tracking-[0.1em] text-warm-grey">

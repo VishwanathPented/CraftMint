@@ -40,7 +40,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
     <div>
       <section className="relative flex h-[70vh] min-h-[480px] items-end bg-charcoal">
         {project.coverImage && (
-          <Image quality={95} src={project.coverImage} alt={project.title} fill priority sizes="100vw" className="object-cover opacity-90" />
+          <Image quality={95} src={project.coverImage} alt={project.title} fill priority sizes="100vw" className="object-scale-down opacity-90" />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/10 to-transparent" />
         <Container className="relative z-10 pb-14">
@@ -109,7 +109,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {project.galleryImages.map((img) => (
                 <div key={img.id} className="relative aspect-[4/3] overflow-hidden bg-limestone">
-                  <Image quality={95} src={img.url} alt={img.caption || project.title} fill sizes="50vw" className="object-cover" />
+                  <Image quality={95} src={img.url} alt={img.caption || project.title} fill sizes="50vw" className="object-scale-down" />
                 </div>
               ))}
             </div>
