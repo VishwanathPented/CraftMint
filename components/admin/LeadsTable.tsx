@@ -76,6 +76,7 @@ export function LeadsTable({ leads }: { leads: Lead[] }) {
               <th className="py-3 pr-4">Name</th>
               <th className="py-3 pr-4">Email</th>
               <th className="py-3 pr-4">Mobile</th>
+              <th className="py-3 pr-4">Company</th>
               <th className="py-3 pr-4">Source</th>
               <th className="py-3 pr-4">Date</th>
               <th className="py-3 pr-4">Status</th>
@@ -88,6 +89,7 @@ export function LeadsTable({ leads }: { leads: Lead[] }) {
                 <td className="py-3 pr-4 text-charcoal">{lead.name}</td>
                 <td className="py-3 pr-4 text-charcoal-soft">{lead.email}</td>
                 <td className="py-3 pr-4 text-charcoal-soft">{lead.mobile || "—"}</td>
+                <td className="py-3 pr-4 text-charcoal-soft">{lead.company || "—"}</td>
                 <td className="py-3 pr-4 text-charcoal-soft">{lead.source}</td>
                 <td className="py-3 pr-4 text-charcoal-soft">{new Date(lead.timestamp).toLocaleDateString("en-IN")}</td>
                 <td className="py-3 pr-4">
@@ -120,7 +122,7 @@ export function LeadsTable({ leads }: { leads: Lead[] }) {
             ))}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={7} className="py-8 text-center text-warm-grey">
+                <td colSpan={8} className="py-8 text-center text-warm-grey">
                   No leads match.
                 </td>
               </tr>

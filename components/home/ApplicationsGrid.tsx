@@ -3,15 +3,22 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { finishes } from "@/data/finishes";
+import { getApplicationImage } from "@/lib/applicationImages";
+import type { Project } from "@/types";
 
-const applications = [
+const applicationDefaults = [
   { title: "Residential", href: "/applications#residential", image: finishes[5].heroImage },
   { title: "Hospitality", href: "/applications#hospitality", image: finishes[2].heroImage },
   { title: "Commercial", href: "/applications#commercial", image: finishes[9].heroImage },
   { title: "Retail", href: "/applications#retail", image: finishes[1].heroImage },
 ];
 
-export function ApplicationsGrid() {
+export function ApplicationsGrid({ projects }: { projects: Project[] }) {
+  const applications = applicationDefaults.map((app) => ({
+    ...app,
+    image: getApplicationImage(projects, app.title, app.image),
+  }));
+
   return (
     <section className="py-24 lg:py-32">
       <Container>

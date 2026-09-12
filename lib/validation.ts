@@ -10,6 +10,7 @@ export const leadSchema = z.object({
     .regex(/^[0-9+\-\s()]*$/, "Please enter a valid mobile number")
     .optional()
     .or(z.literal("")),
+  company: z.string().trim().max(160).optional().or(z.literal("")),
   source: z.string().trim().max(60).default("lead-popup"),
   page: z.string().trim().max(160).default("/"),
 });

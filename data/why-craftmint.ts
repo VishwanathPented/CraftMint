@@ -5,7 +5,7 @@ export const pillars = [
   },
   {
     title: "European Sourcing",
-    description: "Working with Cameleo Deco Coatings, Poland.",
+    description: "Working with Cameleo, Poland, and other European companies.",
   },
   {
     title: "End-to-End Execution",

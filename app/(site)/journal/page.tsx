@@ -10,7 +10,7 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Journal — Notes on Material, Colour & Craft",
-  description: "Craftmint's journal — notes on decorative finishes, texture, colour, architecture and craftsmanship.",
+  description: "CraftMint's journal — notes on decorative finishes, texture, colour, architecture and craftsmanship.",
 };
 
 const topics = [
@@ -32,7 +32,7 @@ export default async function JournalPage() {
       <PageHero
         eyebrow="Journal"
         title="Notes on material, colour and craft"
-        description="Perspectives on decorative finishes, texture, colour and architecture from the Craftmint team."
+        description="Perspectives on decorative finishes, texture, colour and architecture from the CraftMint team."
       />
       <Container className="pb-20 lg:pb-28">
         <div className="flex flex-wrap gap-2 border-b border-line pb-8">

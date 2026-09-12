@@ -102,7 +102,7 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
                 <h2 className="mt-3 font-display text-3xl text-charcoal">See how this effect is created</h2>
                 <p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-charcoal-soft">
                   A demonstration of this decorative technique from Cameleo, our European material partner,
-                  whose coatings Craftmint imports and applies on Indian projects.
+                  whose coatings CraftMint imports and applies on Indian projects.
                 </p>
               </div>
               <VideoLightbox
@@ -130,7 +130,7 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
                 {
                   question: "Application",
                   answer:
-                    "Application method and system build-up are confirmed with the Craftmint team at project stage, based on substrate and site conditions.",
+                    "Application method and system build-up are confirmed with the CraftMint team at project stage, based on substrate and site conditions.",
                 },
                 {
                   question: "Surface Preparation",
@@ -158,7 +158,7 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
                 },
                 {
                   question: "Installation",
-                  answer: "Craftmint offers end-to-end execution — from substrate preparation through to final finishing — for this surface.",
+                  answer: "CraftMint offers end-to-end execution — from substrate preparation through to final finishing — for this surface.",
                 },
               ]}
             />

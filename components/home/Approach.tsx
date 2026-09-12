@@ -12,15 +12,15 @@ export function Approach() {
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           <SectionHeading
-            eyebrow="The Craftmint Approach"
+            eyebrow="The CraftMint Approach"
             title="More than a finish. A material experience."
-            description="Craftmint brings together premium decorative materials, refined surface techniques and experienced execution to create interiors and architectural spaces with depth, character and individuality."
+            description="CraftMint brings together premium decorative materials, refined surface techniques and experienced execution to create interiors and architectural spaces with depth, character and individuality."
           />
           <div className="relative aspect-[4/3] w-full self-end overflow-hidden lg:-mt-8">
             <Image
               quality={95}
               src={texture.heroImage}
-              alt="Close application of a Craftmint-sourced decorative finish"
+              alt="Close application of a CraftMint-sourced decorative finish"
               fill
               sizes="160vw"
               className="object-cover"

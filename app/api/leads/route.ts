@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
     name: parsed.data.name,
     email: parsed.data.email,
     mobile: parsed.data.mobile || "",
+    company: parsed.data.company || "",
     timestamp: new Date().toISOString(),
     source: parsed.data.source,
     page: parsed.data.page,

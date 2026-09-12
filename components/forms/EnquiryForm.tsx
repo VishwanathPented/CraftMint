@@ -46,7 +46,7 @@ export function EnquiryForm({ source = "contact-page" }: { source?: string }) {
       <div className="hairline p-8 text-center">
         <p className="font-display text-2xl text-charcoal">Thank you.</p>
         <p className="mt-3 font-sans text-sm text-charcoal-soft">
-          Your enquiry has been received. A Craftmint team member will be in touch shortly.
+          Your enquiry has been received. A CraftMint team member will be in touch shortly.
         </p>
       </div>
     );

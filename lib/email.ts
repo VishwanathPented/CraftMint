@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 /**
  * Transactional email via Resend: a confirmation auto-reply to the person
- * who submitted a form, and an internal notification to the Craftmint team.
+ * who submitted a form, and an internal notification to the CraftMint team.
  *
  * Failures here are logged, not thrown — a lead/sample-request must still
  * save even if Resend is unreachable or misconfigured.
@@ -18,19 +18,19 @@ function getResend(): Resend | null {
   return client;
 }
 
-const FROM = process.env.EMAIL_FROM || "Craftmint LLP <info@craftmint.in>";
+const FROM = process.env.EMAIL_FROM || "CraftMint LLP <info@craftmint.in>";
 const NOTIFY_TO = process.env.EMAIL_NOTIFY_TO || "info@craftmint.in";
 
 function wrapper(bodyHtml: string): string {
   return `
     <div style="font-family: Georgia, 'Times New Roman', serif; max-width: 560px; margin: 0 auto; color: #2b2b28;">
       <p style="font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #8a8378; margin: 0 0 24px;">
-        Craftmint LLP
+        CraftMint LLP
       </p>
       ${bodyHtml}
       <hr style="border: none; border-top: 1px solid #e5e1d8; margin: 32px 0 16px;" />
       <p style="font-family: Arial, sans-serif; font-size: 12px; color: #8a8378; margin: 0;">
-        Craftmint LLP · info@craftmint.in
+        CraftMint LLP · info@craftmint.in
       </p>
     </div>
   `;
@@ -54,11 +54,11 @@ export async function sendLeadEmails(lead: { name: string; email: string; mobile
   await Promise.all([
     send(
       lead.email,
-      "Thank you for reaching out to Craftmint",
+      "Thank you for reaching out to CraftMint",
       `
         <p style="font-family: Georgia, serif; font-size: 22px; margin: 0 0 16px;">Thank you, ${escapeHtml(lead.name)}.</p>
         <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #4a463f;">
-          We've received your details and a member of the Craftmint team will be in touch shortly
+          We've received your details and a member of the CraftMint team will be in touch shortly
           to discuss your project.
         </p>
         <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #4a463f;">
@@ -98,7 +98,7 @@ export async function sendSampleRequestEmails(req: {
   await Promise.all([
     send(
       req.email,
-      "Your sample request — Craftmint",
+      "Your sample request — CraftMint",
       `
         <p style="font-family: Georgia, serif; font-size: 22px; margin: 0 0 16px;">Thank you, ${escapeHtml(req.name)}.</p>
         <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #4a463f;">

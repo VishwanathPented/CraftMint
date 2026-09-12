@@ -30,7 +30,7 @@ export default async function HomePage() {
       <CameleoSection />
       <ProcessSection />
       <FeaturedProjects projects={featuredProjects} />
-      <ApplicationsGrid />
+      <ApplicationsGrid projects={allProjects.filter((p) => p.published)} />
       <WhyCraftmint />
       <BespokeSection />
       <AboutTeaser />

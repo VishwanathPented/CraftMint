@@ -59,7 +59,7 @@ export function WhatWeCreate() {
             <Link
               key={cat.title}
               href={cat.href}
-              className={`group relative flex aspect-[4/5] flex-col justify-end overflow-hidden ${cat.span}`}
+              className={`group relative flex aspect-[4/5] flex-col justify-end overflow-hidden ${cat.span} ${cat.span ? "lg:aspect-[8/5]" : ""}`}
             >
               <Image
                 quality={95}

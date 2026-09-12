@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
+import { ResourceDownloadCard } from "@/components/resources/ResourceDownloadCard";
 import { resourcesStore } from "@/lib/store";
 import type { ResourceCategory } from "@/types";
 
@@ -8,7 +9,7 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Resources — Technical Data, Guides & Downloads",
-  description: "Technical data, application guides, colour guides and specification documents for Craftmint finishes.",
+  description: "Technical data, application guides, colour guides and specification documents for CraftMint finishes.",
 };
 
 const CATEGORIES: ResourceCategory[] = [
@@ -36,14 +37,7 @@ export default async function ResourcesPage() {
         {resources.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {resources.map((r) => (
-              <a key={r.id} href={r.fileUrl} className="hairline flex flex-col gap-2 p-6 transition-colors hover:border-charcoal">
-                <span className="font-sans text-[11px] uppercase tracking-[0.16em] text-warm-grey">{r.category}</span>
-                <span className="font-display text-xl text-charcoal">{r.title}</span>
-                <span className="font-sans text-sm text-charcoal-soft">{r.description}</span>
-                <span className="mt-2 font-sans text-xs uppercase tracking-[0.1em] text-charcoal">
-                  Download {r.fileType} →
-                </span>
-              </a>
+              <ResourceDownloadCard key={r.id} resource={r} />
             ))}
           </div>
         ) : (

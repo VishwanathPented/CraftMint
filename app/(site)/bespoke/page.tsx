@@ -26,7 +26,7 @@ export default function BespokePage() {
                 Some projects require a finish that isn&rsquo;t simply selected from a catalogue.
               </p>
               <p className="mt-6 font-sans text-base leading-relaxed text-charcoal-soft">
-                Where available, Craftmint can explore custom colours, unique textures, special effects,
+                Where available, CraftMint can explore custom colours, unique textures, special effects,
                 feature surfaces, custom combinations and bespoke applications — developed alongside your
                 design team for a specific space.
               </p>

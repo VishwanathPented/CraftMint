@@ -29,7 +29,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-screen bg-ivory">
       <aside className="hidden w-64 shrink-0 flex-col border-r border-line bg-limestone/60 p-6 lg:flex">
         <Link href="/" className="font-display text-xl text-charcoal">
-          Craftmint <span className="text-mint">Admin</span>
+          CraftMint <span className="text-mint">Admin</span>
         </Link>
         <nav className="mt-10 flex flex-col gap-1">
           {links.map((link) => (
@@ -55,7 +55,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
       </aside>
       <div className="flex-1 overflow-x-hidden">
         <div className="flex items-center justify-between border-b border-line p-4 lg:hidden">
-          <span className="font-display text-lg text-charcoal">Craftmint Admin</span>
+          <span className="font-display text-lg text-charcoal">CraftMint Admin</span>
           <button type="button" onClick={logout} className="font-sans text-xs uppercase tracking-[0.08em] text-charcoal-soft">
             Log out
           </button>

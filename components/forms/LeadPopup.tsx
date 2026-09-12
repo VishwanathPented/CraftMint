@@ -77,13 +77,13 @@ export function LeadPopup() {
         {!submitted ? (
           <>
             <span className="font-sans text-[11px] font-medium uppercase tracking-[0.24em] text-warm-grey">
-              Craftmint LLP
+              CraftMint LLP
             </span>
             <h2 id="lead-popup-heading" className="mt-3 font-display text-3xl leading-tight text-charcoal">
               Let&rsquo;s Create Your Surface
             </h2>
             <p className="mt-3 font-sans text-sm leading-relaxed text-charcoal-soft">
-              Tell us a little about your project and discover the possibilities with Craftmint.
+              Tell us a little about your project and discover the possibilities with CraftMint.
             </p>
 
             <form onSubmit={onSubmit} className="mt-7 flex flex-col gap-4">
@@ -143,7 +143,7 @@ export function LeadPopup() {
               Thank You
             </span>
             <p className="font-display text-2xl leading-snug text-charcoal">
-              Your details have been received. A Craftmint team member will be in touch shortly.
+              Your details have been received. A CraftMint team member will be in touch shortly.
             </p>
             <LinkButton href="/finishes" onClick={dismiss} size="lg" className="mt-2">
               Explore Finishes

@@ -6,7 +6,7 @@ import type { Finish } from "@/types";
 export function FinishCard({ finish, priority = false }: { finish: Finish; priority?: boolean }) {
   return (
     <Link href={`/finishes/${finish.slug}`} className="group flex flex-col">
-      <div className="relative aspect-[4/5] w-full overflow-hidden bg-limestone">
+      <div className="relative aspect-square w-full overflow-hidden bg-limestone">
         <Image
           quality={95}
           src={finish.heroImage}

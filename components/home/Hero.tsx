@@ -88,7 +88,7 @@ export function Hero() {
       className="relative flex h-[92vh] min-h-[640px] w-full items-end overflow-hidden bg-charcoal focus:outline-none"
       role="region"
       aria-roledescription="carousel"
-      aria-label="Featured Craftmint surface finishes"
+      aria-label="Featured CraftMint surface finishes"
       tabIndex={0}
       onKeyDown={onKeyDown}
       onMouseEnter={() => setPaused(true)}
@@ -142,7 +142,7 @@ export function Hero() {
 
       <div className="relative z-10 w-full px-6 pb-16 md:px-10 lg:px-16 lg:pb-20">
         <div className="mx-auto max-w-[1440px]">
-          <Eyebrow className="text-ivory/70 animate-fade-up">Craftmint LLP</Eyebrow>
+          <Eyebrow className="text-ivory/70 animate-fade-up">CraftMint LLP</Eyebrow>
           <h1 className="mt-4 max-w-3xl font-display text-5xl leading-[1.02] tracking-tight text-ivory text-balance animate-fade-up sm:text-6xl lg:text-8xl [animation-delay:120ms]">
             Surfaces that
             <br />

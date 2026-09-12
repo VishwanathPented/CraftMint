@@ -53,7 +53,7 @@ export function SampleRequestForm() {
       <div className="hairline p-10 text-center">
         <p className="font-display text-2xl text-charcoal">Thank you.</p>
         <p className="mx-auto mt-3 max-w-sm font-sans text-sm text-charcoal-soft">
-          Your sample request has been received. A Craftmint team member will confirm details and
+          Your sample request has been received. A CraftMint team member will confirm details and
           dispatch shortly.
         </p>
         <LinkButton href="/finishes" size="lg" className="mt-6">

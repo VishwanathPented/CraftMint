@@ -9,7 +9,7 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Projects — Architectural Finishes in Real Spaces",
-  description: "Craftmint's project portfolio — decorative finishes, textures and architectural surfaces executed end-to-end.",
+  description: "CraftMint's project portfolio — decorative finishes, textures and architectural surfaces executed end-to-end.",
 };
 
 export default async function ProjectsPage() {
@@ -22,7 +22,7 @@ export default async function ProjectsPage() {
           <SectionHeading
             eyebrow="Portfolio"
             title="Projects we've brought to life"
-            description="A growing archive of the spaces Craftmint has helped finish — from feature walls to full interiors."
+            description="A growing archive of the spaces CraftMint has helped finish — from feature walls to full interiors."
             className="max-w-2xl"
           />
           <LinkButton href="/contact" variant="secondary" className="shrink-0">

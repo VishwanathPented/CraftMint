@@ -13,7 +13,7 @@ export function Logo({ variant = "light", className }: { variant?: "light" | "da
       <Image
         quality={95}
         src="/images/Logos/craftmint-logo.png"
-        alt="Craftmint LLP"
+        alt="CraftMint LLP"
         width={231}
         height={117}
         priority

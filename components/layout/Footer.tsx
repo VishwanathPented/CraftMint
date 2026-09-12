@@ -31,6 +31,12 @@ export function Footer() {
             <p className="max-w-xs font-sans text-sm leading-relaxed text-ivory/70">
               Premium decorative surfaces, textures and architectural finishes with end-to-end project execution.
             </p>
+            <a
+              href="mailto:info@craftmint.in"
+              className="font-sans text-sm text-ivory/80 transition-colors hover:text-ivory"
+            >
+              info@craftmint.in
+            </a>
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
@@ -53,7 +59,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-xs text-ivory/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Craftmint LLP. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} CraftMint LLP. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/contact" className="hover:text-ivory">
               Request Sample

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FinishCard } from "./FinishCard";
 import { cn } from "@/lib/utils";
@@ -131,6 +132,19 @@ export function FinishExplorer() {
             </div>
           </div>
         ))}
+
+        <div className="hairline flex flex-col gap-3 p-5">
+          <p className="font-display text-lg leading-snug text-charcoal">Not sure which finish fits your space?</p>
+          <p className="font-sans text-sm leading-relaxed text-charcoal-soft">
+            Talk to our team — we&rsquo;ll help you understand the options and finalise the right finish for your project.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-1 font-sans text-xs uppercase tracking-[0.1em] text-charcoal underline underline-offset-4 decoration-line hover:decoration-charcoal"
+          >
+            Talk to Us →
+          </Link>
+        </div>
       </aside>
 
       <div>

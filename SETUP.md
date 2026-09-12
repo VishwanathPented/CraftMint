@@ -55,7 +55,7 @@ Safe to re-run — it upserts by id.
 5. Add to `.env.local`:
    ```
    RESEND_API_KEY=re_...
-   EMAIL_FROM=Craftmint LLP <info@craftmint.in>
+   EMAIL_FROM=CraftMint LLP <info@craftmint.in>
    EMAIL_NOTIFY_TO=info@craftmint.in
    ```
 

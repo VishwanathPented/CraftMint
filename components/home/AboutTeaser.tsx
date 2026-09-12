@@ -13,12 +13,12 @@ export function AboutTeaser() {
             <Image quality={95} src={finishes[3].heroImage} alt="Sculptural concrete effect texture, close detail" fill sizes="280vw" className="object-cover" />
           </div>
           <div className="flex flex-col justify-center gap-6 lg:col-span-2 lg:pl-10">
-            <Eyebrow>About Craftmint</Eyebrow>
+            <Eyebrow>About CraftMint</Eyebrow>
             <h2 className="max-w-xl font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl">
               We believe surfaces can define a space.
             </h2>
             <p className="max-w-xl font-sans text-base leading-relaxed text-charcoal-soft">
-              Craftmint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring
+              CraftMint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring
               and architectural materials — working with material, craft, design and execution as one
               continuous discipline, from first sample to finished wall.
             </p>

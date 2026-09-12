@@ -17,7 +17,7 @@ export function BespokeSection() {
         </h2>
         <p className="mx-auto mt-6 max-w-xl font-sans text-base leading-relaxed text-ivory/75">
           Some projects require a finish that isn&rsquo;t simply selected from a catalogue. Where available,
-          Craftmint can explore custom colours, unique textures, special effects, feature surfaces, custom
+          CraftMint can explore custom colours, unique textures, special effects, feature surfaces, custom
           combinations and bespoke applications.
         </p>
         <LinkButton href="/bespoke" size="lg" className="mt-9 bg-ivory text-charcoal hover:bg-ivory/85">

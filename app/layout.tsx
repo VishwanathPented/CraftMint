@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Libre_Caslon_Display, Inter } from "next/font/google";
 import { SplashScreen } from "@/components/layout/SplashScreen";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const libreCaslonDisplay = Libre_Caslon_Display({
+  variable: "--font-libre-caslon",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
-  style: ["normal", "italic"],
+  weight: "400",
 });
 
 const inter = Inter({
@@ -19,11 +18,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.craftmint.in"),
   title: {
-    default: "Craftmint LLP — Premium Decorative Surfaces & Architectural Finishes",
-    template: "%s | Craftmint LLP",
+    default: "CraftMint LLP — Premium Decorative Surfaces & Architectural Finishes",
+    template: "%s | CraftMint LLP",
   },
   description:
-    "Craftmint LLP brings together premium decorative finishes, textures and architectural surfaces with material expertise and end-to-end project execution, working with Cameleo Deco Coatings, Poland.",
+    "CraftMint LLP brings together premium decorative finishes, textures and architectural surfaces with material expertise and end-to-end project execution, working with Cameleo, Poland, and other European companies.",
   keywords: [
     "decorative wall finishes India",
     "texture paint",
@@ -37,10 +36,10 @@ export const metadata: Metadata = {
     "designer wall textures",
   ],
   openGraph: {
-    title: "Craftmint LLP — Crafted Surfaces. Distinctive Spaces.",
+    title: "CraftMint LLP — Crafted Surfaces. Distinctive Spaces.",
     description:
       "Premium decorative finishes, textures and architectural surfaces, brought together with material expertise and end-to-end execution.",
-    siteName: "Craftmint LLP",
+    siteName: "CraftMint LLP",
     type: "website",
     locale: "en_IN",
   },
@@ -50,16 +49,16 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Craftmint LLP",
+  name: "CraftMint LLP",
   description:
-    "Craftmint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring and architectural materials, working with Cameleo Deco Coatings, Poland.",
+    "CraftMint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring and architectural materials, working with Cameleo, Poland, and other European companies.",
   url: "https://www.craftmint.in",
   areaServed: "IN",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${libreCaslonDisplay.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-ivory text-charcoal">
         <script
           type="application/ld+json"

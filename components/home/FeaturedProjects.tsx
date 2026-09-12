@@ -29,7 +29,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
           <div className="mt-14 hairline flex flex-col items-center gap-4 px-6 py-20 text-center">
             <p className="font-display text-2xl text-charcoal">Our project archive is being curated</p>
             <p className="max-w-md font-sans text-sm text-charcoal-soft">
-              Real project photography from Craftmint&rsquo;s work is being added here. In the meantime,
+              Real project photography from CraftMint&rsquo;s work is being added here. In the meantime,
               explore the finishes and textures available for your own project.
             </p>
             <LinkButton href="/finishes" className="mt-2">

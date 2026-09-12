@@ -6,7 +6,7 @@ import { SampleRequestForm } from "@/components/forms/SampleRequestForm";
 
 export const metadata: Metadata = {
   title: "Request a Sample",
-  description: "Request a physical sample of a Craftmint decorative finish to evaluate in your own space and light.",
+  description: "Request a physical sample of a CraftMint decorative finish to evaluate in your own space and light.",
 };
 
 export default function SampleRequestPage() {
@@ -17,7 +17,7 @@ export default function SampleRequestPage() {
           <Eyebrow>Sample Request</Eyebrow>
           <h1 className="mt-3 font-display text-5xl text-charcoal sm:text-6xl">See it before you specify it.</h1>
           <p className="mt-5 font-sans text-base leading-relaxed text-charcoal-soft">
-            Evaluate a physical sample of any Craftmint finish in your own space and light before making a
+            Evaluate a physical sample of any CraftMint finish in your own space and light before making a
             decision.
           </p>
         </div>

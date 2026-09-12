@@ -7,7 +7,7 @@ import { finishes } from "@/data/finishes";
 
 export const metadata: Metadata = {
   title: "Inspiration — Textures, Colours & Architectural Detail",
-  description: "A visual gallery of textures, colours and architectural detail from the Craftmint material library.",
+  description: "A visual gallery of textures, colours and architectural detail from the CraftMint material library.",
 };
 
 // "hero" entries are real interior/application photography (~1200px source) and
@@ -33,7 +33,7 @@ export default function InspirationPage() {
       <PageHero
         eyebrow="Inspiration"
         title="Texture, colour and architectural detail"
-        description="A visual gallery drawn from the Craftmint material library — for moodboards, specification and simple appreciation of material."
+        description="A visual gallery drawn from the CraftMint material library — for moodboards, specification and simple appreciation of material."
       />
       <Container className="pb-20 lg:pb-28">
         <div className="columns-2 gap-4 sm:columns-3 [&>*]:mb-4">

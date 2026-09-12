@@ -3,7 +3,7 @@ import type { Finish } from "@/types";
 /**
  * Official Cameleo Deco Coatings (Poland) application-technique videos.
  *
- * Craftmint imports and applies Cameleo materials on Indian projects (see
+ * CraftMint imports and applies Cameleo materials on Indian projects (see
  * app/(site)/cameleo). Every entry below was verified directly against the
  * live cameleo.pl product pages — each product page embeds one YouTube
  * video via youtube.com/embed/{id} — and cross-checked against the YouTube
@@ -11,7 +11,7 @@ import type { Finish } from "@/types";
  * official channel, youtube.com/@Cameleo_TV) for every ID here. Nothing in
  * this list is guessed.
  *
- * Craftmint's own finish catalogue (data/finishes.ts) uses placeholder
+ * CraftMint's own finish catalogue (data/finishes.ts) uses placeholder
  * names pending a finalised product range, so these are intentionally
  * mapped at the category/technique level (getFinishTechniqueVideo below),
  * not claimed as a specific SKU match.

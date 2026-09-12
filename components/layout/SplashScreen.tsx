@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const MIN_DISPLAY_MS = 600;
@@ -48,9 +49,14 @@ export function SplashScreen() {
       )}
       style={{ transitionDuration: `${FADE_MS}ms` }}
     >
-      <span className="font-display text-2xl uppercase tracking-[0.3em] text-charcoal md:text-3xl">
-        Craftmint
-      </span>
+      <Image
+        src="/images/Logos/craftmint-logo.png"
+        alt="CraftMint"
+        width={231}
+        height={117}
+        priority
+        className="h-14 w-auto md:h-16"
+      />
     </div>
   );
 }

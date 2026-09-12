@@ -6,7 +6,7 @@ import { EnquiryForm } from "@/components/forms/EnquiryForm";
 
 export const metadata: Metadata = {
   title: "Contact & Enquire",
-  description: "Start your project with Craftmint — enquire about a finish, a bespoke surface, or a full project.",
+  description: "Start your project with CraftMint — enquire about a finish, a bespoke surface, or a full project.",
 };
 
 export default function ContactPage() {
@@ -21,9 +21,17 @@ export default function ContactPage() {
               Whether you&rsquo;re specifying a finish for a client, exploring options for your own home, or
               starting a full project, our team is here to help.
             </p>
-            <div className="mt-10 space-y-1 font-sans text-sm text-charcoal-soft">
-              <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Craftmint LLP</p>
-              <p>Send an enquiry using the form and our team will respond directly.</p>
+            <div className="mt-10 space-y-4 font-sans text-sm text-charcoal-soft">
+              <div>
+                <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">CraftMint LLP</p>
+                <p>Send an enquiry using the form and our team will respond directly.</p>
+              </div>
+              <div>
+                <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Email</p>
+                <a href="mailto:info@craftmint.in" className="text-charcoal hover:underline">
+                  info@craftmint.in
+                </a>
+              </div>
             </div>
           </div>
           <Suspense fallback={null}>

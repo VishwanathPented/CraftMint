@@ -1,4 +1,4 @@
-// Central type definitions for the Craftmint data layer.
+// Central type definitions for the CraftMint data layer.
 // Keeping these in one place means every data source (generated JSON,
 // hand-curated finish/project data, the local JSON "database" used for
 // leads/samples) speaks the same shapes, and can later be swapped for a
@@ -146,6 +146,7 @@ export interface Lead {
   name: string;
   email: string;
   mobile: string;
+  company?: string;
   timestamp: string;
   source: string;
   page: string;

@@ -5,10 +5,14 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { PageHero } from "@/components/layout/PageHero";
 import { finishes } from "@/data/finishes";
+import { projectsStore } from "@/lib/store";
+import { getApplicationImage } from "@/lib/applicationImages";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Applications — Residential, Hospitality, Commercial & More",
-  description: "Where Craftmint decorative finishes are used — residential, hospitality, commercial, retail, flooring and exterior applications.",
+  description: "Where CraftMint decorative finishes are used — residential, hospitality, commercial, retail, flooring and exterior applications.",
 };
 
 const groups = [
@@ -56,7 +60,9 @@ const groups = [
   },
 ];
 
-export default function ApplicationsPage() {
+export default async function ApplicationsPage() {
+  const projects = (await projectsStore.all()).filter((p) => p.published);
+
   return (
     <div>
       <PageHero eyebrow="Applications" title="Wherever the surface matters." image={finishes[13].heroImage} />
@@ -66,7 +72,14 @@ export default function ApplicationsPage() {
           <Container className="py-16 lg:py-20">
             <div className={`grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center lg:gap-16 ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image quality={95} src={group.image} alt={group.title} fill sizes="160vw" className="object-cover" />
+                <Image
+                  quality={95}
+                  src={getApplicationImage(projects, group.title, group.image)}
+                  alt={group.title}
+                  fill
+                  sizes="160vw"
+                  className="object-cover"
+                />
               </div>
               <div>
                 <Eyebrow>Application</Eyebrow>

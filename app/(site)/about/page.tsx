@@ -7,9 +7,9 @@ import { PageHero } from "@/components/layout/PageHero";
 import { finishes } from "@/data/finishes";
 
 export const metadata: Metadata = {
-  title: "About Craftmint LLP",
+  title: "About CraftMint LLP",
   description:
-    "Craftmint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring and architectural materials, working with Cameleo Deco Coatings, Poland.",
+    "CraftMint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring and architectural materials, working with Cameleo, Poland, and other European companies.",
 };
 
 const focusAreas = ["Material", "Craft", "Design", "Execution", "Detail"];
@@ -18,7 +18,7 @@ export default function AboutPage() {
   return (
     <div>
       <PageHero
-        eyebrow="About Craftmint"
+        eyebrow="About CraftMint"
         title="We believe surfaces can define a space."
         image={finishes[3].heroImage}
       />
@@ -29,18 +29,18 @@ export default function AboutPage() {
             <div>
               <Eyebrow>Our Story</Eyebrow>
               <p className="mt-4 font-display text-2xl leading-snug text-charcoal">
-                Craftmint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring
+                CraftMint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring
                 and architectural materials.
               </p>
               <p className="mt-6 font-sans text-base leading-relaxed text-charcoal-soft">
-                Craftmint works with Cameleo Deco Coatings, Poland, importing selected materials and
-                bringing them to Indian projects through professional execution — connecting European
-                decorative coating expertise with on-ground project delivery, from first sample to
+                CraftMint works with Cameleo, Poland, and other European companies. We import selected
+                materials and bring them to Indian projects through professional execution. This connects
+                European decorative coating expertise with on-ground project delivery, from first sample to
                 finished wall.
               </p>
             </div>
             <div className="relative aspect-[4/5] overflow-hidden">
-              <Image quality={95} src={finishes[8].heroImage} alt="A Craftmint-sourced decorative finish applied in an interior" fill sizes="260vw" className="object-cover" />
+              <Image quality={95} src={finishes[8].heroImage} alt="A CraftMint-sourced decorative finish applied in an interior" fill sizes="260vw" className="object-cover" />
             </div>
           </div>
 

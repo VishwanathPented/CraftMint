@@ -12,7 +12,7 @@ export function ExplorerTeaser() {
           <SectionHeading
             eyebrow="Finish Explorer"
             title="Filter by texture, sheen, style and space"
-            description="Search the full Craftmint collection by finish type, texture, sheen, style, application and colour family — built for architects and designers moving from inspiration to specification."
+            description="Search the full CraftMint collection by finish type, texture, sheen, style, application and colour family — built for architects and designers moving from inspiration to specification."
           />
           <div>
             <div className="flex flex-wrap gap-2">

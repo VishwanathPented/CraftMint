@@ -58,7 +58,7 @@ export function ProjectExplorer({ projects }: { projects: Project[] }) {
         <div className="mt-14 flex flex-col items-center gap-3 py-20 text-center">
           <p className="font-display text-2xl text-charcoal">No projects in this category yet</p>
           <p className="max-w-sm font-sans text-sm text-charcoal-soft">
-            Craftmint&rsquo;s project archive is growing. Check back soon, or start a project of your own.
+            CraftMint&rsquo;s project archive is growing. Check back soon, or start a project of your own.
           </p>
         </div>
       )}

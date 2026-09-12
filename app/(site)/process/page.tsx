@@ -8,7 +8,7 @@ import { finishes } from "@/data/finishes";
 
 export const metadata: Metadata = {
   title: "Our Process — From Material to Finished Space",
-  description: "How Craftmint takes a project from consultation and sampling through to specification, sourcing and professional execution.",
+  description: "How CraftMint takes a project from consultation and sampling through to specification, sourcing and professional execution.",
 };
 
 export default function ProcessPage() {
@@ -17,7 +17,7 @@ export default function ProcessPage() {
       <PageHero
         eyebrow="Our Process"
         title="From material to finished space."
-        description="Craftmint can support a project from finish selection through to execution — a project partner, not merely a material supplier."
+        description="CraftMint can support a project from finish selection through to execution — a project partner, not merely a material supplier."
         image={finishes[13].heroImage}
       />
 

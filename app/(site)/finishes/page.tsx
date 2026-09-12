@@ -7,7 +7,7 @@ import { FinishExplorer } from "@/components/finishes/FinishExplorer";
 export const metadata: Metadata = {
   title: "Finishes — Decorative Wall Finishes & Textures",
   description:
-    "Explore Craftmint's collection of decorative finishes — concrete, stone, metallic and mineral effects — filterable by texture, sheen, style and application.",
+    "Explore CraftMint's collection of decorative finishes — concrete, stone, metallic and mineral effects — filterable by texture, sheen, style and application.",
 };
 
 export default function FinishesPage() {

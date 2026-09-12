@@ -1,16 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { SwatchImage } from "@/components/finishes/SwatchImage";
 import { finishes } from "@/data/finishes";
 
 export function InspirationTeaser() {
-  const images = [
-    finishes[9].swatches[3]?.image,
-    finishes[10].swatches[5]?.image,
-    finishes[15].swatches[2]?.image,
-    finishes[6].swatches[1]?.image,
-  ].filter((x): x is string => Boolean(x));
+  const images = [finishes[9].heroImage, finishes[10].heroImage, finishes[15].heroImage, finishes[6].heroImage];
 
   return (
     <section className="py-24 lg:py-32">
@@ -28,8 +23,15 @@ export function InspirationTeaser() {
         </div>
         <div className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
           {images.map((src, i) => (
-            <div key={src + i} className={`relative aspect-square overflow-hidden ${i === 1 ? "lg:mt-8" : ""} ${i === 2 ? "lg:-mt-8" : ""}`}>
-              <SwatchImage src={src} alt="Craftmint decorative finish detail" sizes="(min-width: 1024px) 25vw, 50vw" />
+            <div key={src + i} className={`relative aspect-square overflow-hidden bg-limestone ${i === 1 ? "lg:mt-8" : ""} ${i === 2 ? "lg:-mt-8" : ""}`}>
+              <Image
+                quality={95}
+                src={src}
+                alt="CraftMint decorative finish detail"
+                fill
+                sizes="(min-width: 1024px) 25vw, 50vw"
+                className="object-cover"
+              />
             </div>
           ))}
         </div>

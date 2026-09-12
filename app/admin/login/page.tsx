@@ -37,7 +37,7 @@ function LoginForm() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-limestone px-6">
       <form onSubmit={onSubmit} className="w-full max-w-sm bg-ivory p-10 shadow-[0_24px_60px_-24px_rgba(33,30,26,0.35)]">
-        <p className="font-display text-2xl text-charcoal">Craftmint Admin</p>
+        <p className="font-display text-2xl text-charcoal">CraftMint Admin</p>
         <p className="mt-2 font-sans text-sm text-charcoal-soft">Sign in to manage leads, projects and content.</p>
         <div className="mt-8">
           <label htmlFor="password" className="font-sans text-xs uppercase tracking-[0.08em] text-warm-grey">
