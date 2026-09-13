@@ -38,9 +38,19 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   return (
     <div>
-      <section className="relative flex h-[70vh] min-h-[480px] items-end bg-charcoal">
+      <section className="relative flex h-[48vh] min-h-[360px] items-end bg-charcoal">
         {project.coverImage && (
-          <Image quality={95} src={project.coverImage} alt={project.title} fill priority sizes="100vw" className="object-scale-down opacity-90" />
+          <div className="absolute inset-0 mx-auto w-full max-w-2xl">
+            <Image
+              quality={95}
+              src={project.coverImage}
+              alt={project.title}
+              fill
+              priority
+              sizes="(min-width: 1024px) 672px, 100vw"
+              className="object-scale-down opacity-90"
+            />
+          </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/10 to-transparent" />
         <Container className="relative z-10 pb-14">
@@ -106,10 +116,17 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       {project.galleryImages.length > 0 && (
         <section className="pb-20 lg:pb-28">
           <Container>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {project.galleryImages.map((img) => (
                 <div key={img.id} className="relative aspect-[4/3] overflow-hidden bg-limestone">
-                  <Image quality={95} src={img.url} alt={img.caption || project.title} fill sizes="50vw" className="object-scale-down" />
+                  <Image
+                    quality={95}
+                    src={img.url}
+                    alt={img.caption || project.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 50vw"
+                    className="object-scale-down"
+                  />
                 </div>
               ))}
             </div>

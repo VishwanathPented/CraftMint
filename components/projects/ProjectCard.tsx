@@ -2,21 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/types";
 
-export function ProjectCard({ project, size = "md" }: { project: Project; size?: "md" | "lg" }) {
+export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/projects/${project.slug}`} className="group flex flex-col">
-      <div
-        className={`relative w-full overflow-hidden bg-limestone ${
-          size === "lg" ? "aspect-[16/11]" : "aspect-[4/5]"
-        }`}
-      >
+      <div className="relative aspect-[4/5] w-full overflow-hidden bg-limestone">
         {project.coverImage ? (
           <Image
             quality={95}
             src={project.coverImage}
             alt={project.title}
             fill
-            sizes="(min-width: 1024px) 45vw, 100vw"
+            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
             className="object-scale-down"
           />
         ) : (

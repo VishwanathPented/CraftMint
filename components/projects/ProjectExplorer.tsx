@@ -47,11 +47,9 @@ export function ProjectExplorer({ projects }: { projects: Project[] }) {
       </div>
 
       {filtered.length > 0 ? (
-        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
-          {filtered.map((project, i) => (
-            <div key={project.id} className={i % 3 === 0 ? "sm:col-span-2" : ""}>
-              <ProjectCard project={project} size={i % 3 === 0 ? "lg" : "md"} />
-            </div>
+        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       ) : (
