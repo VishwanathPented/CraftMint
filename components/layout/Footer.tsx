@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "./Logo";
+import { SocialLinks } from "./SocialLinks";
 import { footerNav } from "@/data/navigation";
+import { contactInfo } from "@/data/contact";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 
 function FooterColumn({ title, links }: { title: string; links: { label: string; href: string }[] }) {
@@ -31,12 +33,21 @@ export function Footer() {
             <p className="max-w-xs font-sans text-sm leading-relaxed text-ivory/70">
               Premium decorative surfaces, textures and architectural finishes with end-to-end project execution.
             </p>
-            <a
-              href="mailto:info@craftmint.in"
-              className="font-sans text-sm text-ivory/80 transition-colors hover:text-ivory"
-            >
-              info@craftmint.in
-            </a>
+            <div className="flex flex-col gap-1">
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="font-sans text-sm text-ivory/80 transition-colors hover:text-ivory"
+              >
+                {contactInfo.email}
+              </a>
+              <a
+                href={contactInfo.phoneHref}
+                className="font-sans text-sm text-ivory/80 transition-colors hover:text-ivory"
+              >
+                {contactInfo.phoneDisplay}
+              </a>
+            </div>
+            <SocialLinks variant="dark" />
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">

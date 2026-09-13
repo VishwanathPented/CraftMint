@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
+import { SocialLinks } from "@/components/layout/SocialLinks";
+import { contactInfo } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Contact & Enquire",
@@ -28,9 +30,19 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Email</p>
-                <a href="mailto:info@craftmint.in" className="text-charcoal hover:underline">
-                  info@craftmint.in
+                <a href={`mailto:${contactInfo.email}`} className="text-charcoal hover:underline">
+                  {contactInfo.email}
                 </a>
+              </div>
+              <div>
+                <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Phone</p>
+                <a href={contactInfo.phoneHref} className="text-charcoal hover:underline">
+                  {contactInfo.phoneDisplay}
+                </a>
+              </div>
+              <div>
+                <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Follow</p>
+                <SocialLinks className="mt-1" />
               </div>
             </div>
           </div>
