@@ -23,15 +23,17 @@ export function MaterialSwatchCard({
 }) {
   const content = (
     <>
-      <div className="flex items-center justify-center bg-limestone p-6 sm:p-8">
+      <div className="bg-limestone p-2">
         {/*
-          Fixed frame, same on every card, so a row of mixed-aspect swatch
-          crops still reads as a uniform grid. object-contain (never cover)
-          means the source is scaled down to fit but never cropped, stretched
-          or upscaled beyond its native pixels — narrower crops are simply
-          matted by more of the ivory frame either side.
+          Fixed square frame, same on every card, so a row of swatch crops
+          with different native aspect ratios still reads as one uniform
+          grid. object-cover center-crops each texture to fill the square —
+          safe here because these are continuous/repeating material crops
+          (not a photo subject that can be cropped awkwardly), and their
+          native resolution comfortably covers typical card render sizes,
+          so the crop reads as sharp, not stretched or upscaled.
         */}
-        <div className="relative h-32 w-full overflow-hidden border border-line/70 bg-ivory shadow-[0_1px_3px_rgba(33,30,26,0.08)] transition-shadow duration-300 ease-out group-hover/swatch:shadow-[0_6px_20px_-8px_rgba(33,30,26,0.25)] sm:h-36 lg:h-40">
+        <div className="relative aspect-square w-full overflow-hidden border border-line/70 bg-ivory shadow-[0_1px_3px_rgba(33,30,26,0.08)] transition-shadow duration-300 ease-out group-hover/swatch:shadow-[0_6px_20px_-8px_rgba(33,30,26,0.25)]">
           <Image
             quality={95}
             src={image}
@@ -39,7 +41,7 @@ export function MaterialSwatchCard({
             fill
             priority={priority}
             sizes={sizes}
-            className="object-contain p-2 transition-transform duration-500 ease-out group-hover/swatch:scale-[1.03]"
+            className="object-cover transition-transform duration-500 ease-out group-hover/swatch:scale-[1.03]"
           />
         </div>
       </div>
