@@ -13,7 +13,7 @@ export function ProjectCard({ project }: { project: Project }) {
             alt={project.title}
             fill
             sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-            className="object-scale-down"
+            className="object-cover"
           />
         ) : (
           <div className="flex h-full items-center justify-center font-sans text-xs uppercase tracking-[0.1em] text-warm-grey">

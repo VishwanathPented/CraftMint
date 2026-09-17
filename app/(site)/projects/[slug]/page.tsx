@@ -38,19 +38,17 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   return (
     <div>
-      <section className="relative flex h-[48vh] min-h-[360px] items-end bg-charcoal">
+      <section className="relative flex h-[56vh] min-h-[420px] items-end bg-charcoal">
         {project.coverImage && (
-          <div className="absolute inset-0 mx-auto w-full max-w-2xl">
-            <Image
-              quality={95}
-              src={project.coverImage}
-              alt={project.title}
-              fill
-              priority
-              sizes="(min-width: 1024px) 672px, 100vw"
-              className="object-scale-down opacity-90"
-            />
-          </div>
+          <Image
+            quality={95}
+            src={project.coverImage}
+            alt={project.title}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-80"
+          />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/10 to-transparent" />
         <Container className="relative z-10 pb-14">
@@ -125,7 +123,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                     alt={img.caption || project.title}
                     fill
                     sizes="(min-width: 1024px) 33vw, 50vw"
-                    className="object-scale-down"
+                    className="object-cover"
                   />
                 </div>
               ))}
