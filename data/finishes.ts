@@ -13,11 +13,12 @@ import type {
  * Curated design metadata for each of the 17 finish groups recovered from the
  * supplied catalogue photography (see scripts/build-finish-assets.mjs).
  *
- * These are original design-led classifications derived from looking at the
- * actual texture/colour photography — not manufacturer specification sheets.
- * Names are deliberately placeholders (FINISH 01, 02 ...) until a real
- * product catalogue is supplied; everything here is structured so those
- * fields can be replaced later without touching the UI.
+ * Names are the actual product names printed on each finish's page in
+ * "Cameleo catalog Hi Res.pdf" (the title band at the top of the even/hero
+ * page — e.g. page 4 reads "CONCRETE EFFECT  Classic Effect"), not
+ * placeholders. `category` is set from the material named in that title;
+ * everything else (texture/sheen/style/description) remains the original
+ * design-led read of the photography.
  */
 type CuratedFinish = {
   page: number;
@@ -35,7 +36,7 @@ type CuratedFinish = {
 const CURATED: CuratedFinish[] = [
   {
     page: 5,
-    name: "FINISH 01",
+    name: "Concrete Effect — Classic Effect",
     category: "Concrete",
     textureType: "Medium",
     sheen: "Matte",
@@ -49,8 +50,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 7,
-    name: "FINISH 02",
-    category: "Stucco",
+    name: "Concrete Effect — Smooth Effect",
+    category: "Concrete",
     textureType: "Fine",
     sheen: "Matte",
     styles: ["Minimal", "Contemporary"],
@@ -63,8 +64,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 9,
-    name: "FINISH 03",
-    category: "Textured",
+    name: "Concrete Effect Rough — Classic Effect",
+    category: "Concrete",
     textureType: "Medium",
     sheen: "Satin",
     styles: ["Luxury", "Industrial"],
@@ -77,8 +78,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 11,
-    name: "FINISH 04",
-    category: "Concrete",
+    name: "Travertine Pearl — Oval Trowel Effect",
+    category: "Stone",
     textureType: "Rough",
     sheen: "Satin",
     styles: ["Industrial", "Artistic"],
@@ -91,8 +92,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 13,
-    name: "FINISH 05",
-    category: "Metallic",
+    name: "Travertine Pearl — Grass Effect",
+    category: "Stone",
     textureType: "Medium",
     sheen: "Mid-sheen",
     styles: ["Luxury", "Contemporary"],
@@ -105,8 +106,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 15,
-    name: "FINISH 06",
-    category: "Mineral",
+    name: "Travertine Rough — Classic Effect",
+    category: "Stone",
     textureType: "Fine",
     sheen: "Matte",
     styles: ["Natural", "Minimal"],
@@ -119,8 +120,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 17,
-    name: "FINISH 07",
-    category: "Concrete",
+    name: "Travertine Rough Pearl — Classic Effect",
+    category: "Stone",
     textureType: "Medium",
     sheen: "Satin",
     styles: ["Industrial", "Contemporary"],
@@ -133,8 +134,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 19,
-    name: "FINISH 08",
-    category: "Mineral",
+    name: "Rust Effect — Classic Effect",
+    category: "Metallic",
     textureType: "Fine",
     sheen: "Satin",
     styles: ["Natural", "Organic"],
@@ -147,7 +148,7 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 21,
-    name: "FINISH 09",
+    name: "Patina Effect — Classic Effect",
     category: "Decorative",
     textureType: "Medium",
     sheen: "Polished",
@@ -161,7 +162,7 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 23,
-    name: "FINISH 10",
+    name: "Manhattan Dark — Classic Effect",
     category: "Stone",
     textureType: "Smooth",
     sheen: "Polished",
@@ -175,7 +176,7 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 25,
-    name: "FINISH 11",
+    name: "Manhattan Light — Classic Effect",
     category: "Stone",
     textureType: "Medium",
     sheen: "Satin",
@@ -189,8 +190,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 27,
-    name: "FINISH 12",
-    category: "Polished",
+    name: "Venetian Stucco — Classic Effect",
+    category: "Stucco",
     textureType: "Fine",
     sheen: "Satin",
     styles: ["Luxury", "Contemporary"],
@@ -203,8 +204,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 29,
-    name: "FINISH 13",
-    category: "Mineral",
+    name: "Venetian Stucco — Pearl Effect",
+    category: "Stucco",
     textureType: "Fine",
     sheen: "Matte",
     styles: ["Contemporary", "Natural"],
@@ -217,8 +218,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 31,
-    name: "FINISH 14",
-    category: "Concrete",
+    name: "Pearl Stucco — Classic Effect / Matt",
+    category: "Stucco",
     textureType: "Sculptural",
     sheen: "Matte",
     styles: ["Industrial", "Contemporary"],
@@ -231,8 +232,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 33,
-    name: "FINISH 15",
-    category: "Textured",
+    name: "Liquid Metals — Classic Effect",
+    category: "Metallic",
     textureType: "Heavy",
     sheen: "Matte",
     styles: ["Artistic", "Industrial"],
@@ -245,8 +246,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 35,
-    name: "FINISH 16",
-    category: "Mineral",
+    name: "Granite Effect — Classic Effect",
+    category: "Stone",
     textureType: "Fine",
     sheen: "Matte",
     styles: ["Natural", "Minimal"],
@@ -259,8 +260,8 @@ const CURATED: CuratedFinish[] = [
   },
   {
     page: 37,
-    name: "FINISH 17",
-    category: "Concrete",
+    name: "Granite Effect — Classic Effect / White Base",
+    category: "Stone",
     textureType: "Fine",
     sheen: "Matte",
     styles: ["Contemporary", "Minimal"],
@@ -276,7 +277,10 @@ const CURATED: CuratedFinish[] = [
 const assetByPage = new Map(finishAssets.map((g) => [g.page, g]));
 
 function slugify(name: string) {
-  return name.toLowerCase().replace(/\s+/g, "-");
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 export const finishes: Finish[] = CURATED.map((curated, index) => {
