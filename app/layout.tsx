@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Libre_Caslon_Display, Inter } from "next/font/google";
 import { SplashScreen } from "@/components/layout/SplashScreen";
+import { contactInfo } from "@/data/contact";
 import "./globals.css";
 
 const libreCaslonDisplay = Libre_Caslon_Display({
@@ -54,6 +55,16 @@ const organizationJsonLd = {
     "CraftMint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring and architectural materials, working with Cameleo, Poland, and other European companies.",
   url: "https://www.craftmint.in",
   areaServed: "IN",
+  email: contactInfo.email,
+  telephone: contactInfo.phoneDisplay,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: contactInfo.address.line1,
+    addressLocality: contactInfo.address.city,
+    addressRegion: contactInfo.address.state,
+    postalCode: contactInfo.address.postalCode,
+    addressCountry: "IN",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

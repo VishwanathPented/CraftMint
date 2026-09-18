@@ -46,6 +46,7 @@ export function Footer() {
               >
                 {contactInfo.phoneDisplay}
               </a>
+              <p className="max-w-xs font-sans text-sm text-ivory/80">{contactInfo.address.display}</p>
             </div>
             <SocialLinks variant="dark" />
           </div>

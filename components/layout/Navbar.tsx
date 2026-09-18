@@ -53,7 +53,7 @@ export function Navbar() {
                 <div
                   key={item.href}
                   className="relative"
-                  onMouseEnter={() => isDropdown && setMenuOpen("Finishes")}
+                  onMouseEnter={() => setMenuOpen(isDropdown ? "Finishes" : null)}
                 >
                   <Link
                     href={item.href}

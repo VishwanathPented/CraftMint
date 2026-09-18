@@ -41,6 +41,10 @@ export default function ContactPage() {
                 </a>
               </div>
               <div>
+                <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Studio</p>
+                <p>{contactInfo.address.display}</p>
+              </div>
+              <div>
                 <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Follow</p>
                 <SocialLinks className="mt-1" />
               </div>
