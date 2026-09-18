@@ -9,7 +9,7 @@ export function FinishCard({ finish, priority = false }: { finish: Finish; prior
       <div className="relative aspect-square w-full overflow-hidden bg-limestone">
         <Image
           quality={95}
-          src={finish.heroImage}
+          src={finish.cardImage}
           alt={`${finish.name} — ${finish.category} finish applied`}
           fill
           priority={priority}

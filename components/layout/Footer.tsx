@@ -46,7 +46,14 @@ export function Footer() {
               >
                 {contactInfo.phoneDisplay}
               </a>
-              <p className="max-w-xs font-sans text-sm text-ivory/80">{contactInfo.address.display}</p>
+              <a
+                href={contactInfo.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="max-w-xs font-sans text-sm text-ivory/80 transition-colors hover:text-ivory"
+              >
+                {contactInfo.address.display}
+              </a>
             </div>
             <SocialLinks variant="dark" />
           </div>

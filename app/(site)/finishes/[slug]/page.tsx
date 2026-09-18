@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { LinkButton } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
+import { GatedDownloadButton } from "@/components/resources/GatedDownloadButton";
 import { ColourExplorer } from "@/components/finishes/ColourExplorer";
 import { FinishCard } from "@/components/finishes/FinishCard";
 import { VideoLightbox } from "@/components/ui/VideoLightbox";
@@ -169,9 +170,15 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
           <div className="mt-8 flex flex-wrap gap-3">
             {finish.datasheets.length > 0 ? (
               finish.datasheets.map((sheet) => (
-                <LinkButton key={sheet.url} href={sheet.url} variant="secondary" target="_blank">
-                  {sheet.label}
-                </LinkButton>
+                <GatedDownloadButton
+                  key={sheet.url}
+                  label={sheet.label}
+                  fileUrl={sheet.url}
+                  heading={`${finish.name} — ${sheet.label}`}
+                  category="Technical Data"
+                  source="finish-datasheet-download"
+                  page={`/finishes/${finish.slug} — ${sheet.label}`}
+                />
               ))
             ) : (
               <LinkButton href="/resources" variant="secondary">

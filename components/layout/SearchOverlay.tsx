@@ -58,7 +58,7 @@ export function SearchOverlay({ open, onClose }: { open: boolean; onClose: () =>
               className="flex items-center gap-4 rounded-sm p-2 transition-colors hover:bg-limestone"
             >
               <div className="relative h-14 w-14 shrink-0 overflow-hidden bg-limestone">
-                <Image quality={95} src={finish.heroImage} alt={finish.name} fill sizes="112px" className="object-cover" />
+                <Image quality={95} src={finish.cardImage} alt={finish.name} fill sizes="112px" className="object-cover" />
               </div>
               <div>
                 <p className="font-sans text-sm font-medium text-charcoal">{finish.name}</p>

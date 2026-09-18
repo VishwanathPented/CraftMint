@@ -333,6 +333,11 @@ export const finishes: Finish[] = CURATED.map((curated, index) => {
     description: curated.description,
     characterNote: curated.characterNote,
     heroImage: hero,
+    // Pre-cropped square derivative of `heroImage` for grid cards (see
+    // scripts/gen-card-crops.mjs) — the source application photos are wide
+    // room shots, so a plain center object-cover crop often lands on
+    // furniture instead of the finish; these are hand-picked clean patches.
+    cardImage: `/images/card_crops/p${String(curated.page - 1).padStart(2, "0")}_img01-card.webp`,
     applicationImages: restHero,
     swatches,
     technicalNotes: {},

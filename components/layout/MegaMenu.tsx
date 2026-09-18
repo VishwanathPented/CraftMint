@@ -56,7 +56,7 @@ export function MegaMenu() {
               >
                 <Image
                   quality={95}
-                  src={finish.heroImage}
+                  src={finish.cardImage}
                   alt={finish.name}
                   fill
                   sizes="240px"

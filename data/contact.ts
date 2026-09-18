@@ -12,4 +12,15 @@ export const contactInfo = {
     country: "India",
     display: "2nd Floor, KSM Enclave, 4th Cross Rd, Banjara Layout, Kalkere, Horamavu, Bengaluru, Karnataka 560113",
   },
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(
+      "CraftMint LLP, 2nd Floor, KSM Enclave, 4th Cross Rd, Banjara Layout, Kalkere, Horamavu, Bengaluru, Karnataka 560113",
+    ),
+  mapsEmbedUrl:
+    "https://www.google.com/maps?q=" +
+    encodeURIComponent(
+      "CraftMint LLP, 2nd Floor, KSM Enclave, 4th Cross Rd, Banjara Layout, Kalkere, Horamavu, Bengaluru, Karnataka 560113",
+    ) +
+    "&output=embed",
 };

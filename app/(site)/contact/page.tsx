@@ -41,13 +41,35 @@ export default function ContactPage() {
                 </a>
               </div>
               <div>
-                <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Studio</p>
-                <p>{contactInfo.address.display}</p>
-              </div>
-              <div>
                 <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Follow</p>
                 <SocialLinks className="mt-1" />
               </div>
+            </div>
+
+            <div className="mt-10">
+              <p className="font-sans text-xs uppercase tracking-[0.16em] text-warm-grey">Studio</p>
+              <a
+                href={contactInfo.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 block aspect-[4/3] w-full overflow-hidden hairline"
+              >
+                <iframe
+                  src={contactInfo.mapsEmbedUrl}
+                  title="CraftMint LLP studio location"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="pointer-events-none h-full w-full border-0"
+                />
+              </a>
+              <a
+                href={contactInfo.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block font-sans text-sm text-charcoal hover:underline"
+              >
+                Get directions →
+              </a>
             </div>
           </div>
           <Suspense fallback={null}>

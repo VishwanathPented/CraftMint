@@ -70,6 +70,7 @@ export interface Finish {
   description: string;
   characterNote: string;
   heroImage: string;
+  cardImage: string;
   applicationImages: string[];
   swatches: ColourSwatch[];
   technicalNotes: Partial<TechnicalInfo>;
