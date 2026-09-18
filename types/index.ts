@@ -73,8 +73,14 @@ export interface Finish {
   applicationImages: string[];
   swatches: ColourSwatch[];
   technicalNotes: Partial<TechnicalInfo>;
+  datasheets: DatasheetLink[];
   featured: boolean;
   published: boolean;
+}
+
+export interface DatasheetLink {
+  label: string;
+  url: string;
 }
 
 export interface TechnicalInfo {

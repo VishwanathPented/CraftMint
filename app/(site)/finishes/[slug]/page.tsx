@@ -150,7 +150,10 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
                 },
                 {
                   question: "Technical Data",
-                  answer: "Full technical data sheets are being prepared and will be available for download here.",
+                  answer:
+                    finish.datasheets.length > 0
+                      ? "Manufacturer technical data sheets for this finish are available for download below."
+                      : "Full technical data sheets are being prepared and will be available for download here.",
                 },
                 {
                   question: "Sustainability",
@@ -163,10 +166,18 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
               ]}
             />
           </div>
-          <div className="mt-8">
-            <LinkButton href="/resources" variant="secondary">
-              Download Technical Data
-            </LinkButton>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {finish.datasheets.length > 0 ? (
+              finish.datasheets.map((sheet) => (
+                <LinkButton key={sheet.url} href={sheet.url} variant="secondary" target="_blank">
+                  {sheet.label}
+                </LinkButton>
+              ))
+            ) : (
+              <LinkButton href="/resources" variant="secondary">
+                Download Technical Data
+              </LinkButton>
+            )}
           </div>
         </Container>
       </section>

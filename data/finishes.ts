@@ -2,6 +2,7 @@ import finishAssets from "@/lib/generated/finish-assets.json";
 import type {
   ApplicationArea,
   ColourFamily,
+  DatasheetLink,
   Finish,
   FinishCategory,
   FinishStyle,
@@ -31,6 +32,7 @@ type CuratedFinish = {
   colourFamilies: ColourFamily[];
   description: string;
   characterNote: string;
+  datasheets?: DatasheetLink[];
 };
 
 const CURATED: CuratedFinish[] = [
@@ -47,6 +49,9 @@ const CURATED: CuratedFinish[] = [
       "A restrained concrete-effect surface with a soft, chalky grain — quietly architectural, built for spaces that let material do the talking.",
     characterNote:
       "Reads as raw poured concrete at a distance, resolving into a fine granular texture up close, with gentle tonal variation across the surface.",
+    datasheets: [
+      { label: "Technical Data Sheet", url: "/datasheets/concrete-effect-classic-tds.pdf" },
+    ],
   },
   {
     page: 7,
@@ -61,6 +66,9 @@ const CURATED: CuratedFinish[] = [
       "A fine, tightly-worked plaster finish with a soft sandy grain — warm, even and unobtrusive against considered interior schemes.",
     characterNote:
       "A close, uniform grain with subtle directional hand-marks left by the trowel, catching light without ever appearing glossy.",
+    datasheets: [
+      { label: "Technical Data Sheet", url: "/datasheets/concrete-effect-smooth-tdse.pdf" },
+    ],
   },
   {
     page: 9,
@@ -75,6 +83,10 @@ const CURATED: CuratedFinish[] = [
       "A deep charcoal textured plaster with a soft satin lift — dramatic in low light, ideal for feature walls and considered thresholds.",
     characterNote:
       "Dense, cloud-like texture with a faint sheen that shifts as light moves across the wall.",
+    datasheets: [
+      { label: "Technical Data Sheet", url: "/datasheets/concrete-effect-rough-tds.pdf" },
+      { label: "Application (Effect) Data Sheet", url: "/datasheets/concrete-effect-rough-tdse.pdf" },
+    ],
   },
   {
     page: 11,
@@ -173,6 +185,10 @@ const CURATED: CuratedFinish[] = [
       "A polished stone-effect surface in deep blue-grey with fine mineral flecking — closer to honed natural stone than paint.",
     characterNote:
       "A smooth, cool base with warm gold flecks caught within it, reading as a quarried stone under direct light.",
+    datasheets: [
+      { label: "Technical Data Sheet", url: "/datasheets/manhattan-tds.pdf" },
+      { label: "Application (Effect) Data Sheet", url: "/datasheets/manhattan-light-dark-silver-tdse.pdf" },
+    ],
   },
   {
     page: 25,
@@ -187,6 +203,10 @@ const CURATED: CuratedFinish[] = [
       "A mottled natural-stone effect in warm grey and beige — an approachable, grounded finish for larger wall areas.",
     characterNote:
       "Irregular mineral mottling across a mid-tone base, avoiding the repetition of a printed stone pattern.",
+    datasheets: [
+      { label: "Technical Data Sheet", url: "/datasheets/manhattan-tds.pdf" },
+      { label: "Application (Effect) Data Sheet", url: "/datasheets/manhattan-light-dark-silver-tdse.pdf" },
+    ],
   },
   {
     page: 27,
@@ -229,6 +249,10 @@ const CURATED: CuratedFinish[] = [
       "A sculptural architectural-concrete effect with strong directional relief — designed to read at scale, from a distance.",
     characterNote:
       "Bold trowel-worked ridges and planes that catch raking light, giving the surface real dimensional depth.",
+    datasheets: [
+      { label: "Technical Data Sheet", url: "/datasheets/pearl-stucco-matt-tds.pdf" },
+      { label: "Application (Effect) Data Sheet", url: "/datasheets/pearl-stucco-matt-tdse.pdf" },
+    ],
   },
   {
     page: 33,
@@ -312,6 +336,7 @@ export const finishes: Finish[] = CURATED.map((curated, index) => {
     applicationImages: restHero,
     swatches,
     technicalNotes: {},
+    datasheets: curated.datasheets ?? [],
     featured: index < 6,
     published: true,
   };

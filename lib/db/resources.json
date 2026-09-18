@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "id": "tds-concrete-effect-classic",
+    "title": "Concrete Effect — Classic Effect (Technical Data Sheet)",
+    "category": "Technical Data",
+    "description": "Manufacturer technical data sheet for the Concrete Effect Classic Effect finish.",
+    "fileType": "PDF",
+    "fileUrl": "/datasheets/concrete-effect-classic-tds.pdf",
+    "published": true
+  },
+  {
+    "id": "tds-concrete-effect-smooth",
+    "title": "Concrete Effect — Smooth Effect (Technical Data Sheet)",
+    "category": "Technical Data",
+    "description": "Manufacturer technical data sheet for the Concrete Effect Smooth Effect finish.",
+    "fileType": "PDF",
+    "fileUrl": "/datasheets/concrete-effect-smooth-tdse.pdf",
+    "published": true
+  },
+  {
+    "id": "tds-concrete-effect-rough",
+    "title": "Concrete Effect Rough — Classic Effect (Technical Data Sheet)",
+    "category": "Technical Data",
+    "description": "Manufacturer technical data sheet for the Concrete Effect Rough finish.",
+    "fileType": "PDF",
+    "fileUrl": "/datasheets/concrete-effect-rough-tds.pdf",
+    "published": true
+  },
+  {
+    "id": "tdse-concrete-effect-rough",
+    "title": "Concrete Effect Rough — Application (Effect) Data Sheet",
+    "category": "Application Guides",
+    "description": "Application technique and effect guidance for the Concrete Effect Rough finish.",
+    "fileType": "PDF",
+    "fileUrl": "/datasheets/concrete-effect-rough-tdse.pdf",
+    "published": true
+  },
+  {
+    "id": "tds-manhattan",
+    "title": "Manhattan (Technical Data Sheet)",
+    "category": "Technical Data",
+    "description": "Manufacturer technical data sheet for the Manhattan Dark and Manhattan Light finishes.",
+    "fileType": "PDF",
+    "fileUrl": "/datasheets/manhattan-tds.pdf",
+    "published": true
+  },
+  {
+    "id": "tdse-manhattan-light-dark-silver",
+    "title": "Manhattan Light / Dark / Silver — Application (Effect) Data Sheet",
+    "category": "Application Guides",
+    "description": "Application technique and effect guidance for the Manhattan Light, Dark and Silver finishes.",
+    "fileType": "PDF",
+    "fileUrl": "/datasheets/manhattan-light-dark-silver-tdse.pdf",
+    "published": true
+  },
+  {
+    "id": "tds-pearl-stucco-matt",
+    "title": "Pearl Stucco — Classic Effect / Matt (Technical Data Sheet)",
+    "category": "Technical Data",
+    "description": "Manufacturer technical data sheet for the Pearl Stucco Classic Effect / Matt finish.",
+    "fileType": "PDF",
+    "fileUrl": "/datasheets/pearl-stucco-matt-tds.pdf",
+    "published": true
+  },
+  {
+    "id": "tdse-pearl-stucco-matt",
+    "title": "Pearl Stucco — Classic Effect / Matt — Application (Effect) Data Sheet",
+    "category": "Application Guides",
+    "description": "Application technique and effect guidance for the Pearl Stucco Classic Effect / Matt finish.",
+    "fileType": "PDF",
+    "fileUrl": "/datasheets/pearl-stucco-matt-tdse.pdf",
+    "published": true
+  }
+]
