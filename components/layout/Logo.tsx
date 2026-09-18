@@ -17,7 +17,7 @@ export function Logo({ variant = "light", className }: { variant?: "light" | "da
         width={231}
         height={117}
         priority
-        className={cn("h-14 w-auto md:h-20", variant === "dark" && "brightness-0 invert")}
+        className={cn("h-12 w-auto md:h-14", variant === "dark" && "brightness-0 invert")}
       />
     </Link>
   );

@@ -55,7 +55,7 @@ export function SplashScreen() {
         width={231}
         height={117}
         priority
-        className="h-14 w-auto md:h-16"
+        className="h-24 w-auto md:h-32"
       />
     </div>
   );
