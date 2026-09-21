@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "About CraftMint LLP",
   description:
     "CraftMint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring and architectural materials, working with Cameleo, Poland, and other European companies.",
+  alternates: { canonical: "/about" },
 };
 
 const focusAreas = ["Material", "Craft", "Design", "Execution", "Detail"];

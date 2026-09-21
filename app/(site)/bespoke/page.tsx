@@ -10,6 +10,7 @@ import { finishes } from "@/data/finishes";
 export const metadata: Metadata = {
   title: "Bespoke Finishes",
   description: "Custom colours, unique textures and bespoke surface possibilities for projects that need more than a catalogue finish.",
+  alternates: { canonical: "/bespoke" },
 };
 
 export default function BespokePage() {

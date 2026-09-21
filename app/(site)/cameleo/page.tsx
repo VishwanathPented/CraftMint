@@ -11,6 +11,7 @@ import { cameleoVideos } from "@/data/cameleoVideos";
 export const metadata: Metadata = {
   title: "Cameleo Deco Coatings, Poland",
   description: "CraftMint works with Cameleo Deco Coatings, Poland, and imports selected materials from Poland for Indian projects.",
+  alternates: { canonical: "/cameleo" },
 };
 
 export default function CameleoPage() {

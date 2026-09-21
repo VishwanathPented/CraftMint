@@ -9,6 +9,7 @@ import { finishes } from "@/data/finishes";
 export const metadata: Metadata = {
   title: "Our Process — From Material to Finished Space",
   description: "How CraftMint takes a project from consultation and sampling through to specification, sourcing and professional execution.",
+  alternates: { canonical: "/process" },
 };
 
 export default function ProcessPage() {

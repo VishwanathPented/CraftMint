@@ -10,6 +10,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Resources — Technical Data, Guides & Downloads",
   description: "Technical data, application guides, colour guides and specification documents for CraftMint finishes.",
+  alternates: { canonical: "/resources" },
 };
 
 const CATEGORIES: ResourceCategory[] = [

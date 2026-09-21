@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { Approach } from "@/components/home/Approach";
 import { WhatWeCreate } from "@/components/home/WhatWeCreate";
@@ -15,6 +16,17 @@ import { FinalCta } from "@/components/home/FinalCta";
 import { projectsStore } from "@/lib/store";
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "CraftMint LLP — Cameleo Decorative Finishes & Wall Textures in India",
+  },
+  description:
+    "CraftMint LLP works with Cameleo, Poland, bringing European decorative wall finishes, textures and architectural surfaces to Indian projects, with material expertise and end-to-end execution.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default async function HomePage() {
   const allProjects = await projectsStore.all();

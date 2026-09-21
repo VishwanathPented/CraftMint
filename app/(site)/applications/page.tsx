@@ -13,6 +13,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Applications — Residential, Hospitality, Commercial & More",
   description: "Where CraftMint decorative finishes are used — residential, hospitality, commercial, retail, flooring and exterior applications.",
+  alternates: { canonical: "/applications" },
 };
 
 const groups = [

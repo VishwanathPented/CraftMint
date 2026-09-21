@@ -19,12 +19,17 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.craftmint.in"),
   title: {
-    default: "CraftMint LLP — Premium Decorative Surfaces & Architectural Finishes",
+    default: "CraftMint LLP — Cameleo Decorative Finishes & Wall Textures in India",
     template: "%s | CraftMint LLP",
   },
   description:
-    "CraftMint LLP brings together premium decorative finishes, textures and architectural surfaces with material expertise and end-to-end project execution, working with Cameleo, Poland, and other European companies.",
+    "CraftMint LLP works with Cameleo, Poland, bringing European decorative wall finishes, textures and architectural surfaces to Indian projects, with material expertise and end-to-end execution.",
   keywords: [
+    "CraftMint",
+    "CraftMint LLP",
+    "Cameleo",
+    "Cameleo India",
+    "Cameleo decorative finishes",
     "decorative wall finishes India",
     "texture paint",
     "luxury wall textures",
@@ -37,12 +42,22 @@ export const metadata: Metadata = {
     "designer wall textures",
   ],
   openGraph: {
-    title: "CraftMint LLP — Crafted Surfaces. Distinctive Spaces.",
+    title: "CraftMint LLP — Cameleo Decorative Finishes & Wall Textures in India",
     description:
-      "Premium decorative finishes, textures and architectural surfaces, brought together with material expertise and end-to-end execution.",
+      "CraftMint LLP brings Cameleo, Poland's decorative coatings to Indian projects — premium wall finishes, textures and architectural surfaces with end-to-end execution.",
     siteName: "CraftMint LLP",
     type: "website",
     locale: "en_IN",
+    url: "https://www.craftmint.in",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CraftMint LLP — Cameleo Decorative Finishes & Wall Textures in India",
+    description:
+      "CraftMint LLP brings Cameleo, Poland's decorative coatings to Indian projects — premium wall finishes, textures and architectural surfaces with end-to-end execution.",
+  },
+  alternates: {
+    canonical: "/",
   },
   robots: { index: true, follow: true },
 };
@@ -51,9 +66,12 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "CraftMint LLP",
+  alternateName: ["CraftMint", "Craftmint Cameleo"],
   description:
     "CraftMint LLP operates in decorative surfaces, texture paints, decorative finishes, flooring and architectural materials, working with Cameleo, Poland, and other European companies.",
   url: "https://www.craftmint.in",
+  logo: "https://www.craftmint.in/images/Logos/craftmint-logo.png",
+  image: "https://www.craftmint.in/images/Logos/craftmint-logo-lockup.jpg",
   areaServed: "IN",
   email: contactInfo.email,
   telephone: contactInfo.phoneDisplay,
@@ -65,6 +83,8 @@ const organizationJsonLd = {
     postalCode: contactInfo.address.postalCode,
     addressCountry: "IN",
   },
+  sameAs: [contactInfo.instagram, contactInfo.linkedin],
+  knowsAbout: ["Cameleo decorative coatings", "Decorative wall finishes", "Architectural surfaces"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

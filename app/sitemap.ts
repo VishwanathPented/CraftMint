@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { finishes } from "@/data/finishes";
-import { projectsStore } from "@/lib/store";
+import { projectsStore, articlesStore } from "@/lib/store";
 
 const BASE_URL = "https://www.craftmint.in";
 
@@ -21,8 +21,9 @@ const staticRoutes = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const projects = await projectsStore.all();
+  const [projects, articles] = await Promise.all([projectsStore.all(), articlesStore.all()]);
   const publishedProjects = projects.filter((p) => p.published);
+  const publishedArticles = articles.filter((a) => a.published);
 
   return [
     ...staticRoutes.map((route) => ({
@@ -36,6 +37,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...publishedProjects.map((p) => ({
       url: `${BASE_URL}/projects/${p.slug}`,
       lastModified: p.updatedAt,
+    })),
+    ...publishedArticles.map((a) => ({
+      url: `${BASE_URL}/journal/${a.slug}`,
+      lastModified: a.createdAt,
     })),
   ];
 }

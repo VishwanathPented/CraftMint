@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Finishes — Decorative Wall Finishes & Textures",
   description:
     "Explore CraftMint's collection of decorative finishes — concrete, stone, metallic and mineral effects — filterable by texture, sheen, style and application.",
+  alternates: { canonical: "/finishes" },
 };
 
 export default function FinishesPage() {

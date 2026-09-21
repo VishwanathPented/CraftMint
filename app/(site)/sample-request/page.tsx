@@ -7,6 +7,7 @@ import { SampleRequestForm } from "@/components/forms/SampleRequestForm";
 export const metadata: Metadata = {
   title: "Request a Sample",
   description: "Request a physical sample of a CraftMint decorative finish to evaluate in your own space and light.",
+  alternates: { canonical: "/sample-request" },
 };
 
 export default function SampleRequestPage() {

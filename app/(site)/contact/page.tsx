@@ -9,6 +9,7 @@ import { contactInfo } from "@/data/contact";
 export const metadata: Metadata = {
   title: "Contact & Enquire",
   description: "Start your project with CraftMint — enquire about a finish, a bespoke surface, or a full project.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

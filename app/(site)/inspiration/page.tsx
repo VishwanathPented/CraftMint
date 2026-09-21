@@ -8,6 +8,7 @@ import { finishes } from "@/data/finishes";
 export const metadata: Metadata = {
   title: "Inspiration — Textures, Colours & Architectural Detail",
   description: "A visual gallery of textures, colours and architectural detail from the CraftMint material library.",
+  alternates: { canonical: "/inspiration" },
 };
 
 // "hero" entries are real interior/application photography (~1200px source) and

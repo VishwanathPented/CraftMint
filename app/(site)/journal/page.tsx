@@ -11,6 +11,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Journal — Notes on Material, Colour & Craft",
   description: "CraftMint's journal — notes on decorative finishes, texture, colour, architecture and craftsmanship.",
+  alternates: { canonical: "/journal" },
 };
 
 const topics = [
