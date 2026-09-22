@@ -17,16 +17,16 @@ export const metadata: Metadata = {
 // would upscale them well past their native resolution, so they get a shorter
 // tile and object-contain instead (see SwatchImage).
 const gallery = [
-  { image: finishes[0].heroImage, category: "Architecture", variant: "hero" as const },
-  { image: finishes[3].swatches[0]?.image, category: "Textures", variant: "swatch" as const },
-  { image: finishes[8].heroImage, category: "Materials", variant: "hero" as const },
-  { image: finishes[9].swatches[4]?.image, category: "Colours", variant: "swatch" as const },
-  { image: finishes[13].heroImage, category: "Architecture", variant: "hero" as const },
-  { image: finishes[10].swatches[6]?.image, category: "Details", variant: "swatch" as const },
-  { image: finishes[2].heroImage, category: "Interiors", variant: "hero" as const },
-  { image: finishes[14].swatches[1]?.image, category: "Textures", variant: "swatch" as const },
-  { image: finishes[5].swatches[0]?.image, category: "Colours", variant: "swatch" as const },
-].filter((g): g is { image: string; category: string; variant: "hero" | "swatch" } => Boolean(g.image));
+  { image: finishes[0].heroImage, category: "Architecture", finishName: finishes[0].name, variant: "hero" as const },
+  { image: finishes[3].swatches[0]?.image, category: "Textures", finishName: finishes[3].name, variant: "swatch" as const },
+  { image: finishes[8].heroImage, category: "Materials", finishName: finishes[8].name, variant: "hero" as const },
+  { image: finishes[9].swatches[4]?.image, category: "Colours", finishName: finishes[9].name, variant: "swatch" as const },
+  { image: finishes[13].heroImage, category: "Architecture", finishName: finishes[13].name, variant: "hero" as const },
+  { image: finishes[10].swatches[6]?.image, category: "Details", finishName: finishes[10].name, variant: "swatch" as const },
+  { image: finishes[2].heroImage, category: "Interiors", finishName: finishes[2].name, variant: "hero" as const },
+  { image: finishes[14].swatches[1]?.image, category: "Textures", finishName: finishes[14].name, variant: "swatch" as const },
+  { image: finishes[5].swatches[0]?.image, category: "Colours", finishName: finishes[5].name, variant: "swatch" as const },
+].filter((g): g is { image: string; category: string; finishName: string; variant: "hero" | "swatch" } => Boolean(g.image));
 
 export default function InspirationPage() {
   return (
@@ -44,7 +44,7 @@ export default function InspirationPage() {
                 <Image
                   quality={95}
                   src={item.image}
-                  alt={`${item.category} inspiration`}
+                  alt={`${item.finishName} — ${item.category} inspiration`}
                   width={600}
                   height={i % 3 === 0 ? 750 : 450}
                   sizes="(min-width: 640px) 66vw, 100vw"
@@ -56,7 +56,7 @@ export default function InspirationPage() {
               </div>
             ) : (
               <div key={i} className="relative aspect-[4/3] break-inside-avoid overflow-hidden">
-                <SwatchImage src={item.image} alt={`${item.category} inspiration`} sizes="(min-width: 640px) 33vw, 50vw" />
+                <SwatchImage src={item.image} alt={`${item.finishName} — ${item.category} inspiration`} sizes="(min-width: 640px) 33vw, 50vw" />
                 <span className="absolute left-3 top-3 z-10 bg-ivory/90 px-2.5 py-1 font-sans text-[10px] uppercase tracking-[0.1em] text-charcoal">
                   {item.category}
                 </span>

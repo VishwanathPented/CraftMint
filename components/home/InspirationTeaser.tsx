@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { finishes } from "@/data/finishes";
 
 export function InspirationTeaser() {
-  const images = [finishes[9].heroImage, finishes[10].heroImage, finishes[15].heroImage, finishes[6].heroImage];
+  const images = [finishes[9], finishes[10], finishes[15], finishes[6]];
 
   return (
     <section className="py-24 lg:py-32">
@@ -22,12 +22,12 @@ export function InspirationTeaser() {
           </div>
         </div>
         <div className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {images.map((src, i) => (
-            <div key={src + i} className={`relative aspect-square overflow-hidden bg-limestone ${i === 1 ? "lg:mt-8" : ""} ${i === 2 ? "lg:-mt-8" : ""}`}>
+          {images.map((finish, i) => (
+            <div key={finish.id} className={`relative aspect-square overflow-hidden bg-limestone ${i === 1 ? "lg:mt-8" : ""} ${i === 2 ? "lg:-mt-8" : ""}`}>
               <Image
                 quality={95}
-                src={src}
-                alt="CraftMint decorative finish detail"
+                src={finish.heroImage}
+                alt={`${finish.name} — ${finish.category} decorative finish`}
                 fill
                 sizes="(min-width: 1024px) 25vw, 50vw"
                 className="object-cover"

@@ -8,9 +8,12 @@ import { Accordion } from "@/components/ui/Accordion";
 import { GatedDownloadButton } from "@/components/resources/GatedDownloadButton";
 import { ColourExplorer } from "@/components/finishes/ColourExplorer";
 import { FinishCard } from "@/components/finishes/FinishCard";
+import { ProjectCard } from "@/components/projects/ProjectCard";
 import { VideoLightbox } from "@/components/ui/VideoLightbox";
 import { finishes, getFinishBySlug, getRelatedFinishes } from "@/data/finishes";
 import { getFinishTechniqueVideo } from "@/data/cameleoVideos";
+import { projectsStore } from "@/lib/store";
+import { SITE_URL, absoluteUrl } from "@/lib/seo";
 
 export function generateStaticParams() {
   return finishes.map((f) => ({ slug: f.slug }));
@@ -38,9 +41,34 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
 
   const related = getRelatedFinishes(finish);
   const techniqueVideo = getFinishTechniqueVideo(finish);
+  const allProjects = await projectsStore.all();
+  const featuredInProjects = allProjects.filter((p) => p.published && p.finishSlugs.includes(finish.slug));
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Finishes", item: `${SITE_URL}/finishes` },
+      { "@type": "ListItem", position: 3, name: finish.name, item: `${SITE_URL}/finishes/${finish.slug}` },
+    ],
+  };
+
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: finish.name,
+    description: finish.description,
+    image: absoluteUrl(finish.heroImage),
+    category: finish.category,
+    brand: { "@type": "Brand", name: "CraftMint" },
+    url: `${SITE_URL}/finishes/${finish.slug}`,
+  };
 
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
       <section className="relative flex h-[70vh] min-h-[480px] items-end bg-charcoal">
         <Image
           quality={95}
@@ -189,6 +217,20 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
           </div>
         </Container>
       </section>
+
+      {featuredInProjects.length > 0 && (
+        <section className="py-20 lg:py-28">
+          <Container>
+            <Eyebrow>Featured In</Eyebrow>
+            <h2 className="mt-3 font-display text-3xl text-charcoal">Projects using this finish</h2>
+            <div className="mt-10 grid grid-cols-1 gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+              {featuredInProjects.map((p) => (
+                <ProjectCard key={p.id} project={p} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       {related.length > 0 && (
         <section className="py-20 lg:py-28">

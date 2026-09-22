@@ -9,6 +9,7 @@ import { VideoLightbox } from "@/components/ui/VideoLightbox";
 import { projectsStore } from "@/lib/store";
 import { finishes } from "@/data/finishes";
 import { extractYouTubeId } from "@/lib/youtube";
+import { SITE_URL } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -40,8 +41,19 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   const usedFinishes = finishes.filter((f) => project.finishSlugs.includes(f.slug));
   const videoId = extractYouTubeId(project.videoUrl);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Projects", item: `${SITE_URL}/projects` },
+      { "@type": "ListItem", position: 3, name: project.title, item: `${SITE_URL}/projects/${project.slug}` },
+    ],
+  };
+
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <section className="relative flex h-[56vh] min-h-[420px] items-end bg-charcoal">
         {project.coverImage && (
           <Image
