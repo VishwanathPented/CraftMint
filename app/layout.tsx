@@ -87,6 +87,17 @@ const organizationJsonLd = {
   knowsAbout: ["Cameleo decorative coatings", "Decorative wall finishes", "Architectural surfaces"],
 };
 
+// Google's documented signal for showing a "site name" (e.g. "CraftMint LLP")
+// in search results instead of the bare domain — see
+// https://developers.google.com/search/docs/appearance/site-names
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "CraftMint LLP",
+  alternateName: "CraftMint",
+  url: "https://www.craftmint.in",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${libreCaslonDisplay.variable} ${inter.variable} h-full antialiased`}>
@@ -94,6 +105,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <SplashScreen />
         {children}
