@@ -15,15 +15,15 @@ export function CameleoSection() {
             <Image quality={95} src={image} alt="Cameleo decorative wall finish, imported from Poland and applied by CraftMint" fill sizes="260vw" className="object-cover" />
           </div>
           <div className="order-1 lg:order-2">
-            <Eyebrow>Cameleo · European Materials</Eyebrow>
+            <Eyebrow>Cameleo Deco Coatings · Poland</Eyebrow>
             <h2 className="mt-3 font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl">
-              Cameleo — European materials, crafted for Indian spaces.
+              Cameleo Deco Coatings — European materials, crafted for Indian spaces.
             </h2>
             <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-charcoal-soft">
-              CraftMint works with Cameleo, Poland, and other European companies, importing selected
-              materials for Indian projects. This brings Cameleo&rsquo;s European decorative coating expertise
-              together with CraftMint&rsquo;s own on-ground project execution — from material selection through
-              to the finished surface.
+              CraftMint works with Cameleo Deco Coatings, Poland, and other European companies, importing
+              selected materials for Indian projects. This brings Cameleo&rsquo;s European decorative coating
+              expertise together with CraftMint&rsquo;s own on-ground project execution — from material
+              selection through to the finished surface.
             </p>
             <LinkButton href="/cameleo" size="lg" className="mt-8">
               Learn More
