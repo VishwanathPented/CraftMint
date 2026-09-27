@@ -12,7 +12,8 @@ import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Cameleo Deco Coatings, Poland",
-  description: "CraftMint works with Cameleo Deco Coatings, Poland, and imports selected materials from Poland for Indian projects.",
+  description:
+    "CraftMint works with Cameleo Deco Coatings, Poland — decorative texture paint and coating systems imported for Indian projects.",
   alternates: { canonical: "/cameleo" },
 };
 
@@ -21,6 +22,11 @@ const faqs = [
     question: "What is Cameleo Deco Coatings?",
     answer:
       "Cameleo Deco Coatings is a Polish manufacturer of decorative coating systems, producing concrete-effect, metallic, stucco and stone-effect finishes for interior and exterior surfaces.",
+  },
+  {
+    question: "Is Cameleo a texture paint brand?",
+    answer:
+      "Cameleo Deco Coatings' products fall into the texture paint category — decorative coatings that build surface texture and effect, rather than a flat colour finish. CraftMint imports and applies these texture paints for Indian projects.",
   },
   {
     question: "Does CraftMint sell Cameleo Deco Coatings products in India?",
@@ -74,8 +80,9 @@ export default function CameleoPage() {
               selection and sampling through to application and handover.
             </p>
             <p className="mt-6 font-sans text-base leading-relaxed text-charcoal-soft">
-              Cameleo Deco Coatings produces decorative coating systems across concrete-effect, metallic,
-              stucco and stone-effect categories — the same categories that make up CraftMint&rsquo;s{" "}
+              Cameleo Deco Coatings produces decorative coating systems — often described as texture
+              paint — across concrete-effect, metallic, stucco and stone-effect categories, the same
+              categories that make up CraftMint&rsquo;s{" "}
               <Link href="/finishes" className="underline underline-offset-2 hover:text-charcoal">
                 finish collection
               </Link>

@@ -30,6 +30,8 @@ export const metadata: Metadata = {
     "Cameleo",
     "Cameleo India",
     "Cameleo decorative finishes",
+    "Cameleo texture paint",
+    "Cameleo Deco Coatings texture paint",
     "decorative wall finishes India",
     "texture paint",
     "luxury wall textures",

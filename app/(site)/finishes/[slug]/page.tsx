@@ -64,6 +64,7 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
     category: finish.category,
     brand: { "@type": "Brand", name: "Cameleo Deco Coatings" },
     manufacturer: { "@type": "Organization", name: "Cameleo Deco Coatings", url: "https://cameleo.pl" },
+    keywords: "Cameleo Deco Coatings, Cameleo texture paint, decorative finish",
     url: `${SITE_URL}/finishes/${finish.slug}`,
   };
 
@@ -91,7 +92,7 @@ export default async function FinishDetailPage({ params }: { params: Promise<{ s
             <Link href="/cameleo" className="underline underline-offset-2 hover:text-ivory">
               Cameleo Deco Coatings
             </Link>{" "}
-            finish, imported from Poland and applied by CraftMint
+            texture paint, imported from Poland and applied by CraftMint
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <LinkButton href={`/sample-request?finish=${finish.slug}`} size="lg" className="bg-ivory text-charcoal hover:bg-ivory/85">

@@ -21,9 +21,9 @@ export function CameleoSection() {
             </h2>
             <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-charcoal-soft">
               CraftMint works with Cameleo Deco Coatings, Poland, and other European companies, importing
-              selected materials for Indian projects. This brings Cameleo&rsquo;s European decorative coating
-              expertise together with CraftMint&rsquo;s own on-ground project execution — from material
-              selection through to the finished surface.
+              selected texture paint and coating materials for Indian projects. This brings Cameleo&rsquo;s
+              European decorative coating expertise together with CraftMint&rsquo;s own on-ground project
+              execution — from material selection through to the finished surface.
             </p>
             <LinkButton href="/cameleo" size="lg" className="mt-8">
               Learn More
