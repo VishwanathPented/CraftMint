@@ -12,7 +12,7 @@ export function CameleoSection() {
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
           <div className="relative order-2 aspect-[4/5] w-full overflow-hidden lg:order-1">
-            <Image quality={95} src={image} alt="Cameleo decorative wall finish, imported from Poland and applied by CraftMint" fill sizes="260vw" className="object-cover" />
+            <Image quality={95} src={image} alt="Cameleo texture paint finish, imported from Poland and applied by CraftMint" fill sizes="260vw" className="object-cover" />
           </div>
           <div className="order-1 lg:order-2">
             <Eyebrow>Cameleo Deco Coatings · Poland</Eyebrow>
@@ -20,10 +20,10 @@ export function CameleoSection() {
               Cameleo Deco Coatings — European materials, crafted for Indian spaces.
             </h2>
             <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-charcoal-soft">
-              CraftMint works with Cameleo Deco Coatings, Poland, and other European companies, importing
-              selected texture paint and coating materials for Indian projects. This brings Cameleo&rsquo;s
-              European decorative coating expertise together with CraftMint&rsquo;s own on-ground project
-              execution — from material selection through to the finished surface.
+              CraftMint imports Cameleo texture paint from Cameleo Deco Coatings, Poland, and works with
+              other European companies for Indian projects. This brings Cameleo&rsquo;s European decorative
+              coating expertise together with CraftMint&rsquo;s own on-ground project execution — from
+              material selection through to the finished surface.
             </p>
             <LinkButton href="/cameleo" size="lg" className="mt-8">
               Learn More

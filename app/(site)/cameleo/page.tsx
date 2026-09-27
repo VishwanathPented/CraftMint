@@ -11,9 +11,9 @@ import { cameleoVideos } from "@/data/cameleoVideos";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Cameleo Deco Coatings, Poland",
+  title: "Cameleo Texture Paint & Deco Coatings, Poland",
   description:
-    "CraftMint works with Cameleo Deco Coatings, Poland — decorative texture paint and coating systems imported for Indian projects.",
+    "CraftMint imports Cameleo texture paint from Cameleo Deco Coatings, Poland, for Indian projects.",
   alternates: { canonical: "/cameleo" },
 };
 
@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "Is Cameleo a texture paint brand?",
     answer:
-      "Cameleo Deco Coatings' products fall into the texture paint category — decorative coatings that build surface texture and effect, rather than a flat colour finish. CraftMint imports and applies these texture paints for Indian projects.",
+      "Cameleo texture paint refers to the decorative coating products made by Cameleo Deco Coatings, Poland — surface coatings that build texture and effect rather than a flat colour finish. CraftMint imports and applies Cameleo texture paint for Indian projects.",
   },
   {
     question: "Does CraftMint sell Cameleo Deco Coatings products in India?",
@@ -64,7 +64,7 @@ export default function CameleoPage() {
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <PageHero eyebrow="Cameleo Deco Coatings · Poland" title="Cameleo Deco Coatings, crafted for Indian spaces." image={finishes[8].heroImage} />
+      <PageHero eyebrow="Cameleo Texture Paint · Deco Coatings, Poland" title="Cameleo Deco Coatings, crafted for Indian spaces." image={finishes[8].heroImage} />
 
       <section className="py-20 lg:py-28">
         <Container>
@@ -80,9 +80,9 @@ export default function CameleoPage() {
               selection and sampling through to application and handover.
             </p>
             <p className="mt-6 font-sans text-base leading-relaxed text-charcoal-soft">
-              Cameleo Deco Coatings produces decorative coating systems — often described as texture
-              paint — across concrete-effect, metallic, stucco and stone-effect categories, the same
-              categories that make up CraftMint&rsquo;s{" "}
+              Cameleo texture paint, manufactured by Cameleo Deco Coatings, spans concrete-effect,
+              metallic, stucco and stone-effect categories — the same categories that make up
+              CraftMint&rsquo;s{" "}
               <Link href="/finishes" className="underline underline-offset-2 hover:text-charcoal">
                 finish collection
               </Link>
